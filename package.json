@@ -1,0 +1,15 @@
+{
+  "name": "headlight-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static marketing website for Headlight Mental Healthcare",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

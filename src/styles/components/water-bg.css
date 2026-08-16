@@ -1,0 +1,38 @@
+/**
+ * Animated water background. The canvas itself is injected by src/js/water-bg.js,
+ * these rules control placement + how subtle the effect reads.
+ */
+.water-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-background);
+  pointer-events: none;
+  opacity: 0.1;
+  background: var(--gradient-soft);
+}
+
+.water-bg--static {
+  opacity: 0.14;
+  background: linear-gradient(
+      180deg,
+      var(--color-surface) 0%,
+      var(--color-surface-alt) 100%
+    ),
+    var(--gradient-water);
+}
+
+/* Sections that sit above the background need an opaque-ish surface so the
+   water reads as a gentle texture rather than noise behind body copy. */
+.water-bg-host {
+  position: relative;
+  z-index: var(--z-content);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .water-bg {
+    opacity: 0.08;
+  }
+}

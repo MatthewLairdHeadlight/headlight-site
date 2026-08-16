@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Headlight Mental Healthcare</title>
+    <meta
+      name="description"
+      content="Connect with Headlight Mental Healthcare. Call, email or send a message to book therapy, medication management or telehealth appointments."
+    />
+    <meta name="theme-color" content="#2C7A8C" />
+    <link rel="canonical" href="https://headlightmentalhealthcare.com/contact.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Contact Headlight Mental Healthcare" />
+    <meta
+      property="og:description"
+      content="Reach our care team — phone, email, offices and appointment requests."
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/src/styles/components/header.css" />
+    <link rel="stylesheet" href="/src/styles/components/hero.css" />
+    <link rel="stylesheet" href="/src/styles/components/button.css" />
+    <link rel="stylesheet" href="/src/styles/components/card.css" />
+    <link rel="stylesheet" href="/src/styles/components/section.css" />
+    <link rel="stylesheet" href="/src/styles/components/cta.css" />
+    <link rel="stylesheet" href="/src/styles/components/form.css" />
+    <link rel="stylesheet" href="/src/styles/components/footer.css" />
+    <link rel="stylesheet" href="/src/styles/components/water-bg.css" />
+
+    <script type="module" src="/src/js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- HEADER — canonical copy lives in src/partials/header.html -->
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="/index.html" aria-label="Headlight Mental Healthcare — home">
+          <span class="brand__mark" aria-hidden="true">H</span>
+          <span class="brand__text">
+            <span class="brand__name">Headlight</span>
+            <span class="brand__sub">Mental Healthcare</span>
+          </span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+
+        <nav class="nav-menu" id="primary-navigation" aria-label="Primary">
+          <a class="nav-menu__link" href="/index.html">Home</a>
+          <a class="nav-menu__link" href="/index.html#about">About</a>
+          <a class="nav-menu__link" href="/index.html#services">Services</a>
+          <a class="nav-menu__link" href="/contact.html" aria-current="page">Contact</a>
+          <a class="btn btn--primary btn--sm" href="#book">Book Now</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="water-bg-host">
+      <!-- HERO -->
+      <section class="hero hero--centered hero--compact">
+        <div class="container hero__inner">
+          <span class="hero__eyebrow reveal">Contact us</span>
+          <h1 class="hero__title reveal">Connect With Us</h1>
+          <p class="hero__subtitle reveal">
+            Reaching out is often the hardest part. Send a message, give us a call, or
+            request an appointment — a care coordinator will respond within one business
+            day.
+          </p>
+          <div class="btn-group hero__actions reveal">
+            <a class="btn btn--lg btn--on-dark" href="#book">Request an appointment</a>
+            <a class="btn btn--lg btn--ghost-light" href="tel:+18005550142">Call (800) 555-0142</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORM + INFO -->
+      <section class="section" id="book">
+        <div class="container">
+          <div class="split split--start split--wide-left">
+            <div>
+              <div class="section__header reveal">
+                <span class="section__eyebrow">Send a message</span>
+                <h2 class="section__title">Tell us how we can help</h2>
+                <p class="section__subtitle">
+                  Share as much or as little as you like. Please do not include sensitive
+                  clinical details — this form is not a secure medical channel.
+                </p>
+              </div>
+
+              <form class="form reveal" data-contact-form novalidate>
+                <div class="form__row form__row--2">
+                  <div class="form__field">
+                    <label class="form__label" for="name">
+                      Full name <span class="form__required" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="form__control"
+                      id="name"
+                      name="name"
+                      type="text"
+                      autocomplete="name"
+                      placeholder="Jordan Rivera"
+                      required
+                    />
+                  </div>
+
+                  <div class="form__field">
+                    <label class="form__label" for="email">
+                      Email <span class="form__required" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="form__control"
+                      id="email"
+                      name="email"
+                      type="email"
+                      autocomplete="email"
+                      placeholder="you@example.com"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form__row form__row--2">
+                  <div class="form__field">
+                    <label class="form__label" for="phone">Phone</label>
+                    <input
+                      class="form__control"
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      autocomplete="tel"
+                      placeholder="(555) 012-3456"
+                    />
+                  </div>
+
+                  <div class="form__field">
+                    <label class="form__label" for="reason">What brings you here?</label>
+                    <select class="form__control" id="reason" name="reason">
+                      <option value="therapy">Individual or family therapy</option>
+                      <option value="medication">Medication management</option>
+                      <option value="telehealth">Telehealth appointment</option>
+                      <option value="insurance">Insurance &amp; billing question</option>
+                      <option value="other">Something else</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form__field">
+                  <label class="form__label" for="message">
+                    Message <span class="form__required" aria-hidden="true">*</span>
+                  </label>
+                  <textarea
+                    class="form__control"
+                    id="message"
+                    name="message"
+                    placeholder="A sentence or two about what you're looking for and the best time to reach you."
+                    required
+                  ></textarea>
+                  <p class="form__hint">
+                    Fields marked <span aria-hidden="true">*</span> are required.
+                  </p>
+                </div>
+
+                <label class="form__checkbox" for="consent">
+                  <input id="consent" name="consent" type="checkbox" required />
+                  <span>
+                    I agree to be contacted by phone or email about my request and have
+                    read the Notice of Privacy Practices.
+                  </span>
+                </label>
+
+                <button class="btn btn--primary btn--lg" type="submit">Send message</button>
+
+                <p class="form__status" role="status" aria-live="polite"></p>
+              </form>
+            </div>
+
+            <aside>
+              <div class="section__header reveal">
+                <span class="section__eyebrow">Direct lines</span>
+                <h2 class="section__title">Contact information</h2>
+              </div>
+
+              <div class="info-list reveal">
+                <div class="info-list__item">
+                  <span class="info-list__icon" aria-hidden="true">☎</span>
+                  <div>
+                    <div class="info-list__label">Phone</div>
+                    <div class="info-list__value"><a href="tel:+18005550142">(800) 555-0142</a></div>
+                  </div>
+                </div>
+
+                <div class="info-list__item">
+                  <span class="info-list__icon" aria-hidden="true">✉</span>
+                  <div>
+                    <div class="info-list__label">Email</div>
+                    <div class="info-list__value">
+                      <a href="mailto:care@headlightmentalhealthcare.com">care@headlightmentalhealthcare.com</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="info-list__item">
+                  <span class="info-list__icon" aria-hidden="true">⌂</span>
+                  <div>
+                    <div class="info-list__label">Main office</div>
+                    <div class="info-list__value">
+                      1200 Harbor View Drive, Suite 210<br />
+                      Seattle, WA 98101
+                    </div>
+                  </div>
+                </div>
+
+                <div class="info-list__item">
+                  <span class="info-list__icon" aria-hidden="true">◷</span>
+                  <div>
+                    <div class="info-list__label">Hours</div>
+                    <div class="info-list__value">
+                      Mon–Fri 8:00am – 7:00pm<br />
+                      Sat 9:00am – 2:00pm<br />
+                      Sun closed
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mt-10 reveal">
+                <span class="card__badge">Urgent support</span>
+                <h3 class="card__title">If you need help right now</h3>
+                <p class="card__text">
+                  Call or text <a href="tel:988">988</a> to reach the Suicide &amp; Crisis
+                  Lifeline, available 24/7. If you are in immediate danger, call 911 or go
+                  to your nearest emergency department.
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOCATIONS -->
+      <section class="section section--alt" id="locations">
+        <div class="container">
+          <div class="section__header section__header--center reveal">
+            <span class="section__eyebrow">Our offices</span>
+            <h2 class="section__title">Find a location near you</h2>
+            <p class="section__subtitle">
+              Every office offers in-person and telehealth appointments, with free parking
+              and accessible entrances.
+            </p>
+          </div>
+
+          <div class="grid grid--3">
+            <article class="card card--location reveal">
+              <span class="card__badge">Flagship</span>
+              <h3 class="card__title">Seattle — Harbor View</h3>
+              <address>
+                1200 Harbor View Drive, Suite 210<br />
+                Seattle, WA 98101
+              </address>
+              <ul class="card__list">
+                <li>Therapy &amp; medication management</li>
+                <li>Mon–Fri 8:00am – 7:00pm</li>
+              </ul>
+              <a class="card__link" href="tel:+18005550142">Call this office →</a>
+            </article>
+
+            <article class="card card--location reveal">
+              <span class="card__badge">Eastside</span>
+              <h3 class="card__title">Bellevue — Lakeside</h3>
+              <address>
+                845 Lakeside Avenue NE, Suite 120<br />
+                Bellevue, WA 98004
+              </address>
+              <ul class="card__list">
+                <li>Therapy, teen &amp; family care</li>
+                <li>Mon–Sat 9:00am – 6:00pm</li>
+              </ul>
+              <a class="card__link" href="tel:+18005550142">Call this office →</a>
+            </article>
+
+            <article class="card card--location reveal">
+              <span class="card__badge">South</span>
+              <h3 class="card__title">Tacoma — Commerce</h3>
+              <address>
+                310 Commerce Street, Suite 405<br />
+                Tacoma, WA 98402
+              </address>
+              <ul class="card__list">
+                <li>Therapy &amp; psychiatric evaluation</li>
+                <li>Mon–Fri 8:30am – 5:30pm</li>
+              </ul>
+              <a class="card__link" href="tel:+18005550142">Call this office →</a>
+            </article>
+          </div>
+
+          <div class="map-frame mt-10 reveal" role="img" aria-label="Map of Headlight Mental Healthcare office locations across the Puget Sound region">
+            <div class="map-frame__content">
+              <div class="map-frame__pin" aria-hidden="true">◉</div>
+              <h3>Map placeholder</h3>
+              <p class="text-muted mt-6">
+                Replace this block with a Google Maps embed<br />
+                (<code>&lt;iframe src="https://www.google.com/maps/embed?..."&gt;</code>).
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section">
+        <div class="container container--narrow">
+          <div class="section__header section__header--center reveal">
+            <span class="section__eyebrow">Before you call</span>
+            <h2 class="section__title">Common questions</h2>
+          </div>
+
+          <div class="grid">
+            <article class="card reveal">
+              <h3 class="card__title">Do you take my insurance?</h3>
+              <p class="card__text">
+                We are in-network with most major commercial plans and several Medicaid
+                programs. Send us your plan name and member ID and we will verify your
+                benefits before your first visit.
+              </p>
+            </article>
+            <article class="card reveal">
+              <h3 class="card__title">How soon can I be seen?</h3>
+              <p class="card__text">
+                Most new clients have a first appointment within three to five business
+                days. Telehealth slots are often available sooner.
+              </p>
+            </article>
+            <article class="card reveal">
+              <h3 class="card__title">Can I switch clinicians?</h3>
+              <p class="card__text">
+                Absolutely. Fit matters more than anything else in therapy — tell your
+                care coordinator and we will re-match you, no awkward conversation
+                required.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-section__inner">
+            <span class="cta-section__eyebrow reveal">We are glad you are here</span>
+            <h2 class="cta-section__title reveal">Take the first step</h2>
+            <p class="cta-section__text reveal">
+              One short conversation is all it takes to find out what care could look like
+              for you.
+            </p>
+            <div class="btn-group cta-section__actions reveal">
+              <a class="btn btn--lg btn--on-dark" href="#book">Request an appointment</a>
+              <a class="btn btn--lg btn--ghost-light" href="mailto:care@headlightmentalhealthcare.com">Email our team</a>
+            </div>
+            <p class="cta-section__note reveal">
+              Most major insurance plans accepted. Sliding-scale options available.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER — canonical copy lives in src/partials/footer.html -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div>
+            <a class="brand" href="/index.html">
+              <span class="brand__mark" aria-hidden="true">H</span>
+              <span class="brand__text">
+                <span class="brand__name">Headlight</span>
+                <span class="brand__sub">Mental Healthcare</span>
+              </span>
+            </a>
+            <p class="site-footer__tagline">
+              Compassionate, evidence-based mental healthcare for individuals, couples and
+              families — in person and online.
+            </p>
+            <div class="site-footer__crisis">
+              <strong>In crisis?</strong> Call or text <a href="tel:988">988</a> for the
+              Suicide &amp; Crisis Lifeline, or dial 911 if you are in immediate danger.
+            </div>
+          </div>
+
+          <div>
+            <h2 class="site-footer__heading">Quick links</h2>
+            <ul class="site-footer__links">
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/index.html#about">About us</a></li>
+              <li><a href="/index.html#services">Services</a></li>
+              <li><a href="/index.html#testimonials">Client stories</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+              <li><a href="/contact.html#book">Book an appointment</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="site-footer__heading">Get in touch</h2>
+            <address class="site-footer__contact">
+              <div>
+                <span class="site-footer__contact-label">Phone</span>
+                <a href="tel:+18005550142">(800) 555-0142</a>
+              </div>
+              <div>
+                <span class="site-footer__contact-label">Email</span>
+                <a href="mailto:care@headlightmentalhealthcare.com">care@headlightmentalhealthcare.com</a>
+              </div>
+              <div>
+                <span class="site-footer__contact-label">Office</span>
+                1200 Harbor View Drive, Suite 210<br />
+                Seattle, WA 98101
+              </div>
+              <div>
+                <span class="site-footer__contact-label">Hours</span>
+                Mon–Fri 8:00am – 7:00pm<br />
+                Sat 9:00am – 2:00pm
+              </div>
+            </address>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <p>&copy; <span data-current-year>2026</span> Headlight Mental Healthcare. All rights reserved.</p>
+          <div class="site-footer__legal">
+            <a href="/contact.html">Privacy Policy</a>
+            <a href="/contact.html">Notice of Privacy Practices</a>
+            <a href="/contact.html">Accessibility</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
