@@ -1,5 +1,6 @@
 import { initWaterBackground } from './water-bg.js';
 import { initScrollReveal } from './scroll-reveal.js';
+import { defineSiteComponents } from './site-components.js';
 
 function initMobileNav() {
   const toggle = document.querySelector('.nav-toggle');
@@ -42,28 +43,23 @@ function initHeaderScrollState() {
 }
 
 function initContactForm() {
-  const form = document.querySelector('[data-contact-form]');
-  if (!form) return;
+  document.querySelectorAll('[data-contact-form]').forEach((form) => {
+    const status = form.querySelector('.form__status');
 
-  const status = form.querySelector('.form__status');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (status) {
+        status.classList.remove('form__status--visible');
+      }
+      if (!form.reportValidity()) return;
 
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    if (status) {
-      status.classList.remove('form__status--visible');
-    }
-    if (!form.reportValidity()) return;
-
-    // No backend yet — point this at a form service (Formspree, Netlify Forms,
-    // your EHR intake endpoint) when the real integration is ready.
-    if (status) {
-      const name = form.querySelector('#name')?.value.trim();
-      status.textContent = name
-        ? `Thank you, ${name}. Your message has been received — a care coordinator will reach out within one business day.`
-        : 'Thank you. Your message has been received — a care coordinator will reach out within one business day.';
-      status.classList.add('form__status--visible');
-    }
-    form.reset();
+      if (status) {
+        status.textContent =
+          form.dataset.statusMessage ||
+          'This form is a front-end placeholder only. No information is being sent yet — please connect a HIPAA-compliant backend before collecting patient details.';
+        status.classList.add('form__status--visible');
+      }
+    });
   });
 }
 
@@ -74,6 +70,7 @@ function initFooterYear() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  defineSiteComponents();
   initWaterBackground();
   initScrollReveal();
   initMobileNav();

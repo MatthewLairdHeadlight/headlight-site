@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  min-height: clamp(34rem, 74vh, 48rem);
   padding: calc(var(--nav-height) + var(--space-20)) 0 var(--space-24);
   background: var(--gradient-hero);
   color: var(--color-white);
@@ -11,8 +11,16 @@
 }
 
 .hero--compact {
-  min-height: 62vh;
+  min-height: clamp(28rem, 58vh, 36rem);
   padding: calc(var(--nav-height) + var(--space-16)) 0 var(--space-16);
+}
+
+.hero--full {
+  min-height: clamp(38rem, 88vh, 56rem);
+}
+
+.hero--overlap {
+  padding-bottom: calc(var(--space-24) + var(--space-12));
 }
 
 /* Soft overlay so text stays readable over the animated water layers */
@@ -39,6 +47,40 @@
   opacity: 0.22;
   z-index: var(--z-background);
   pointer-events: none;
+}
+
+.hero__ripple {
+  position: absolute;
+  inset: auto -8% 0;
+  height: 56%;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.16) 100%),
+    repeating-linear-gradient(
+      110deg,
+      rgba(255, 255, 255, 0.16) 0 18px,
+      rgba(255, 255, 255, 0.06) 18px 38px,
+      transparent 38px 92px
+    );
+  opacity: 0.72;
+  z-index: var(--z-background);
+  animation: hero-water 18s linear infinite;
+  transform: skewY(-4deg);
+}
+
+.hero__ripple::before,
+.hero__ripple::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.18), transparent 34%),
+    radial-gradient(circle at 80% 12%, rgba(255, 255, 255, 0.16), transparent 26%),
+    linear-gradient(180deg, rgba(79, 126, 242, 0) 0%, rgba(79, 126, 242, 0.42) 100%);
+}
+
+.hero__ripple::after {
+  opacity: 0.65;
+  animation: hero-water 24s linear infinite reverse;
 }
 
 .hero__inner {
@@ -78,6 +120,12 @@
   font-size: var(--font-size-lg);
   line-height: var(--line-height-relaxed);
   color: var(--color-white-90);
+}
+
+.hero__fine-print {
+  margin-top: var(--space-6);
+  font-size: var(--font-size-sm);
+  color: var(--color-white-70);
 }
 
 .hero__actions {
@@ -157,6 +205,15 @@
   }
 }
 
+@keyframes hero-water {
+  from {
+    transform: translateX(0) skewY(-4deg);
+  }
+  to {
+    transform: translateX(160px) skewY(-4deg);
+  }
+}
+
 @media (min-width: 768px) {
   .hero__title {
     font-size: var(--font-size-5xl);
@@ -164,6 +221,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .hero__ripple,
+  .hero__ripple::after {
+    animation: none;
+  }
+
   .hero__scroll-line {
     animation: none;
   }

@@ -35,6 +35,14 @@
   color: var(--color-text);
 }
 
+.card__eyebrow {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--color-primary-light);
+}
+
 .card__text {
   color: var(--color-text-muted);
 }
@@ -168,6 +176,23 @@
   color: var(--color-primary);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+.card__phone {
+  margin-top: auto;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+}
+
+.card--post .card__title {
+  font-size: var(--font-size-lg);
+}
+
+.card--post time {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
   letter-spacing: var(--letter-spacing-wide);
   text-transform: uppercase;
 }

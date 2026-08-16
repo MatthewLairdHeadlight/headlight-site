@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog — Headlight Mental Healthcare</title>
+    <meta
+      name="description"
+      content="Read upcoming articles and practice updates from Headlight Mental Healthcare."
+    />
+    <meta name="theme-color" content="#2459D4" />
+    <link rel="canonical" href="https://headlightmentalhealthcare.com/blog.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Blog — Headlight Mental Healthcare" />
+    <meta
+      property="og:description"
+      content="A shared-component blog index ready for future posts and practice resources."
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/src/styles/components/header.css" />
+    <link rel="stylesheet" href="/src/styles/components/hero.css" />
+    <link rel="stylesheet" href="/src/styles/components/button.css" />
+    <link rel="stylesheet" href="/src/styles/components/card.css" />
+    <link rel="stylesheet" href="/src/styles/components/section.css" />
+    <link rel="stylesheet" href="/src/styles/components/cta.css" />
+    <link rel="stylesheet" href="/src/styles/components/form.css" />
+    <link rel="stylesheet" href="/src/styles/components/footer.css" />
+    <link rel="stylesheet" href="/src/styles/components/water-bg.css" />
+    <link rel="stylesheet" href="/src/styles/components/content.css" />
+
+    <script type="module" src="/src/js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <site-header active="blog"></site-header>
+
+    <main id="main" class="water-bg-host">
+      <page-banner
+        compact
+        badge="Practice notes"
+        title="Blog"
+        subtitle="A calm, simple blog index ready for future articles, announcements, and mental health education."
+      >
+        <a slot="actions" class="btn btn--lg btn--on-dark" href="/appointments.html#intake">
+          Request an Appointment
+        </a>
+      </page-banner>
+
+      <section class="section">
+        <div class="container">
+          <div class="section__header section__header--center reveal">
+            <span class="section__eyebrow">Coming soon</span>
+            <h2 class="section__title">Placeholder posts built from the shared card system</h2>
+            <p class="section__subtitle">
+              Add future posts by duplicating one of these card blocks and updating the title,
+              date, and summary.
+            </p>
+          </div>
+
+          <div class="grid grid--3">
+            <article class="card card--post reveal">
+              <time datetime="2026-08-01">August 2026</time>
+              <h3 class="card__title">What to expect from a first psychiatric appointment</h3>
+              <p class="card__text">
+                Placeholder summary for a future introduction to evaluation, treatment planning,
+                and how the intake process works.
+              </p>
+            </article>
+
+            <article class="card card--post reveal">
+              <time datetime="2026-08-08">August 2026</time>
+              <h3 class="card__title">How medication optimization conversations can help</h3>
+              <p class="card__text">
+                Placeholder summary for a future article on reviewing side effects, prior
+                treatment history, and GeneSight-informed questions.
+              </p>
+            </article>
+
+            <article class="card card--post reveal">
+              <time datetime="2026-08-15">August 2026</time>
+              <h3 class="card__title">Integrated care for co-occurring mental health needs</h3>
+              <p class="card__text">
+                Placeholder summary for a future article about treating overlapping symptoms with
+                a coherent, evidence-based psychiatric plan.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <site-cta
+        eyebrow="Need care now?"
+        title="The blog can wait if you are looking for support today"
+        text="Use the appointment page to request a next step, or call the Arizona or Oregon office directly."
+      >
+        <a slot="actions" class="btn btn--lg btn--on-dark" href="/appointments.html#intake">
+          Request an Appointment
+        </a>
+      </site-cta>
+    </main>
+
+    <site-footer></site-footer>
+  </body>
+</html>

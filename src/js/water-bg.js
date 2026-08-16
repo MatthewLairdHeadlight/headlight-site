@@ -12,10 +12,10 @@
 
 const COLUMN_COUNT = 15;
 const COLORS = [
-  [124, 200, 212], // --color-accent
-  [107, 184, 196], // --color-primary-lighter
-  [74, 155, 170], // --color-primary-light
-  [184, 224, 232], // --color-accent-pale
+  [110, 160, 255], // --color-accent
+  [138, 170, 253], // --color-primary-lighter
+  [79, 126, 242], // --color-primary-light
+  [217, 229, 255], // --color-accent-pale
 ];
 
 function createColumns(count) {
@@ -43,9 +43,9 @@ function paintStaticGradient(ctx, width, height) {
   ctx.clearRect(0, 0, width, height);
 
   const base = ctx.createLinearGradient(0, 0, 0, height);
-  base.addColorStop(0, 'rgba(184, 224, 232, 0.55)');
-  base.addColorStop(0.5, 'rgba(107, 184, 196, 0.35)');
-  base.addColorStop(1, 'rgba(44, 122, 140, 0.15)');
+  base.addColorStop(0, 'rgba(217, 229, 255, 0.55)');
+  base.addColorStop(0.5, 'rgba(79, 126, 242, 0.32)');
+  base.addColorStop(1, 'rgba(36, 89, 212, 0.16)');
   ctx.fillStyle = base;
   ctx.fillRect(0, 0, width, height);
 

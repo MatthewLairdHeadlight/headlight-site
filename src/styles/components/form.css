@@ -105,6 +105,16 @@ select.form__control {
   color: var(--color-text-light);
 }
 
+.form__notice {
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border-soft);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+}
+
 .form__status {
   display: none;
   padding: var(--space-4) var(--space-5);

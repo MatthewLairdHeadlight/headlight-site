@@ -42,17 +42,31 @@
 }
 
 .brand__mark {
-  width: 34px;
-  height: 34px;
-  border-radius: var(--radius-full);
-  background: var(--gradient-cta);
-  display: grid;
-  place-items: center;
-  color: var(--color-white);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-  box-shadow: var(--shadow-sm);
+  position: relative;
+  width: 40px;
+  height: 28px;
   flex: none;
+}
+
+.brand__orb {
+  position: absolute;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  transform: translateY(-50%);
+}
+
+.brand__orb--primary {
+  left: 0;
+  background: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.brand__orb--secondary {
+  right: 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
 }
 
 .brand__text {
@@ -62,13 +76,17 @@
 }
 
 .brand__name {
+  color: var(--color-primary);
   font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .brand__sub {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-medium);
-  letter-spacing: var(--letter-spacing-wide);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-text-light);
 }

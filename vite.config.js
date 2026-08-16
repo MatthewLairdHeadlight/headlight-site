@@ -6,7 +6,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',
+        about: 'about.html',
+        services: 'services.html',
+        appointments: 'appointments.html',
         contact: 'contact.html',
+        blog: 'blog.html',
       },
     },
   },
