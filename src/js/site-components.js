@@ -30,6 +30,15 @@ function extractSlotMarkup(host, slotName) {
     .join('');
 }
 
+function escapeHtml(value = '') {
+  return value
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
+
 function renderNavLinks(active) {
   return NAV_ITEMS.map(({ id, href, label }) => {
     const current = active === id ? ' aria-current="page"' : '';
@@ -75,8 +84,8 @@ class SiteHeader extends HTMLElement {
 class PageBanner extends HTMLElement {
   connectedCallback() {
     const badge = this.getAttribute('badge');
-    const title = this.getAttribute('title') ?? '';
-    const subtitle = this.getAttribute('subtitle') ?? '';
+    const title = escapeHtml(this.getAttribute('title') ?? '');
+    const subtitle = escapeHtml(this.getAttribute('subtitle') ?? '');
     const finePrint = this.getAttribute('fine-print');
     const classes = ['hero', 'hero--centered', 'hero--page'];
 
@@ -92,11 +101,11 @@ class PageBanner extends HTMLElement {
       <section class="${classes.join(' ')}">
         <div class="hero__ripple" aria-hidden="true"></div>
         <div class="container hero__inner">
-          ${badge ? `<span class="hero__eyebrow reveal">${badge}</span>` : ''}
+          ${badge ? `<span class="hero__eyebrow reveal">${escapeHtml(badge)}</span>` : ''}
           <h1 class="hero__title reveal">${title}</h1>
           <p class="hero__subtitle reveal">${subtitle}</p>
           ${actions ? `<div class="btn-group hero__actions reveal">${actions}</div>` : ''}
-          ${finePrint ? `<p class="hero__fine-print reveal">${finePrint}</p>` : ''}
+          ${finePrint ? `<p class="hero__fine-print reveal">${escapeHtml(finePrint)}</p>` : ''}
           ${meta ? `<ul class="hero__meta reveal">${meta}</ul>` : ''}
         </div>
         ${
@@ -115,8 +124,8 @@ class PageBanner extends HTMLElement {
 class SiteCta extends HTMLElement {
   connectedCallback() {
     const eyebrow = this.getAttribute('eyebrow');
-    const title = this.getAttribute('title') ?? '';
-    const text = this.getAttribute('text') ?? '';
+    const title = escapeHtml(this.getAttribute('title') ?? '');
+    const text = escapeHtml(this.getAttribute('text') ?? '');
     const note = this.getAttribute('note');
     const actions = extractSlotMarkup(this, 'actions');
 
@@ -124,11 +133,15 @@ class SiteCta extends HTMLElement {
       <section class="cta-section">
         <div class="container">
           <div class="cta-section__inner">
-            ${eyebrow ? `<span class="cta-section__eyebrow reveal">${eyebrow}</span>` : ''}
+            ${
+              eyebrow
+                ? `<span class="cta-section__eyebrow reveal">${escapeHtml(eyebrow)}</span>`
+                : ''
+            }
             <h2 class="cta-section__title reveal">${title}</h2>
             <p class="cta-section__text reveal">${text}</p>
             ${actions ? `<div class="btn-group cta-section__actions reveal">${actions}</div>` : ''}
-            ${note ? `<p class="cta-section__note reveal">${note}</p>` : ''}
+            ${note ? `<p class="cta-section__note reveal">${escapeHtml(note)}</p>` : ''}
           </div>
         </div>
       </section>
@@ -138,6 +151,8 @@ class SiteCta extends HTMLElement {
 
 class SiteFooter extends HTMLElement {
   connectedCallback() {
+    const currentYear = new Date().getFullYear();
+
     this.innerHTML = `
       <footer class="site-footer">
         <div class="container">
@@ -188,7 +203,7 @@ class SiteFooter extends HTMLElement {
           </div>
 
           <div class="site-footer__bottom">
-            <span>© <span data-current-year></span> Headlight Mental Healthcare</span>
+            <span>© ${currentYear} Headlight Mental Healthcare</span>
             <div class="site-footer__legal">
               <a href="/contact.html#privacy-note">Privacy notice placeholder</a>
               <a href="/contact.html#accessibility-note">Accessibility note placeholder</a>

@@ -26,20 +26,18 @@ export function initScrollReveal() {
   document.head.appendChild(style);
 
   const targets = document.querySelectorAll('.reveal');
+  const revealOrder = new Map(Array.from(targets).map((el, index) => [el, index % 6]));
 
   if (prefersReduced || !('IntersectionObserver' in window)) {
     targets.forEach((el) => el.classList.add('revealed'));
     return;
   }
 
-  let revealCount = 0;
-
   const observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry) => {
+      entries.forEach((entry, index) => {
         if (!entry.isIntersecting) return;
-        const delay = revealCount * 80;
-        revealCount += 1;
+        const delay = (revealOrder.get(entry.target) ?? index) * 80;
         window.setTimeout(() => entry.target.classList.add('revealed'), delay);
         observer.unobserve(entry.target);
       });

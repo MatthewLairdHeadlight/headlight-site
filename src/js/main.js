@@ -48,12 +48,10 @@ function initContactForm() {
 
     form.addEventListener('submit', (event) => {
       event.preventDefault();
-      if (status) {
-        status.classList.remove('form__status--visible');
-      }
       if (!form.reportValidity()) return;
 
       if (status) {
+        status.classList.remove('form__status--visible');
         status.textContent =
           form.dataset.statusMessage ||
           'This form is a front-end placeholder only. No information is being sent yet — please connect a HIPAA-compliant backend before collecting patient details.';
@@ -63,18 +61,20 @@ function initContactForm() {
   });
 }
 
-function initFooterYear() {
-  document.querySelectorAll('[data-current-year]').forEach((el) => {
-    el.textContent = String(new Date().getFullYear());
-  });
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   defineSiteComponents();
   initWaterBackground();
-  initScrollReveal();
-  initMobileNav();
-  initHeaderScrollState();
-  initContactForm();
-  initFooterYear();
+  Promise.all([
+    customElements.whenDefined('site-header'),
+    customElements.whenDefined('page-banner'),
+    customElements.whenDefined('site-cta'),
+    customElements.whenDefined('site-footer'),
+  ]).then(() => {
+    window.requestAnimationFrame(() => {
+      initScrollReveal();
+      initMobileNav();
+      initHeaderScrollState();
+      initContactForm();
+    });
+  });
 });
