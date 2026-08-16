@@ -32,11 +32,15 @@ export function initScrollReveal() {
     return;
   }
 
+  let revealCount = 0;
+
   const observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry, i) => {
+      entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        window.setTimeout(() => entry.target.classList.add('revealed'), i * 80);
+        const delay = revealCount * 80;
+        revealCount += 1;
+        window.setTimeout(() => entry.target.classList.add('revealed'), delay);
         observer.unobserve(entry.target);
       });
     },

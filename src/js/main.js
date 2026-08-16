@@ -49,6 +49,9 @@ function initContactForm() {
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
+    if (status) {
+      status.classList.remove('form__status--visible');
+    }
     if (!form.reportValidity()) return;
 
     // No backend yet — point this at a form service (Formspree, Netlify Forms,

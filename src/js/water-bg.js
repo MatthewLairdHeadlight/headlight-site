@@ -198,11 +198,7 @@ export function initWaterBackground() {
   window.addEventListener('resize', onResize);
   document.addEventListener('visibilitychange', onVisibility);
 
-  if (typeof motionQuery.addEventListener === 'function') {
-    motionQuery.addEventListener('change', start);
-  } else if (typeof motionQuery.addListener === 'function') {
-    motionQuery.addListener(start);
-  }
+  motionQuery.addEventListener('change', start);
 
   return { canvas, stop, start };
 }
