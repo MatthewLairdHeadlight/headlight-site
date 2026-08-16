@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Initial Evaluation Coding — Capture What You Deliver</title>
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --text: #1d2939;
+      --muted: #475467;
+      --border: #d0d5dd;
+      --accent: #175cd3;
+      --warn: #b42318;
+      --warn-bg: #fef3f2;
+      --ok-bg: #eef4ff;
+      --good-bg: #ecfdf3;
+      --highlight-bg: #fff8e7;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.35;
+      font-size: 14px;
+    }
+
+    .sheet {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 18px;
+      display: grid;
+      gap: 12px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.15;
+      color: #0c111d;
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: #101828;
+    }
+
+    p { margin: 0; }
+
+    .banner {
+      border: 2px solid var(--warn);
+      background: var(--warn-bg);
+      border-radius: 12px;
+      padding: 12px;
+      font-weight: 600;
+      color: #7a271a;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+    }
+
+    .hero {
+      border-left: 6px solid var(--accent);
+      background: linear-gradient(180deg, #f5f8ff 0%, #ffffff 100%);
+    }
+
+    .problem { border-left: 6px solid #f79009; background: #fffaf0; }
+    .question { border-left: 6px solid #7a5af8; background: #f4f3ff; }
+    .reject { border-left: 6px solid #d92d20; background: #fff5f5; }
+
+    .grid-2 {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      background: #fff;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 8px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th { background: #f2f4f7; }
+
+    ul { margin: 0; padding-left: 18px; }
+    li { margin: 4px 0; }
+
+    .tree {
+      display: grid;
+      gap: 8px;
+    }
+
+    .node {
+      border: 1px dashed #98a2b3;
+      border-radius: 10px;
+      padding: 8px;
+      background: #fcfcfd;
+    }
+
+    .arrow { color: #667085; font-weight: 700; }
+
+    .small {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .money {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 8px;
+    }
+
+    .money .card {
+      background: var(--good-bg);
+      border-color: #abefc6;
+    }
+
+    .code {
+      font-size: 19px;
+      font-weight: 800;
+      color: #027a48;
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 900px) {
+      .grid-2, .money { grid-template-columns: 1fr; }
+      h1 { font-size: 24px; }
+    }
+
+    @media print {
+      @page { size: letter; margin: 0.45in; }
+      body { background: #fff; }
+      .sheet { padding: 0; gap: 8px; }
+      .card, .banner { break-inside: avoid; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <section class="banner">
+      ⚠️ This is a general reference, not billing/legal advice. CPT codes, thresholds, and payer rules change yearly.
+      <strong>Code every visit accurately based on the actual time and complexity of THAT visit — do NOT apply one code combination uniformly to all claims (that is upcoding).</strong>
+      Confirm all codes and reimbursement with a certified biller/coder before use.
+    </section>
+
+    <section class="card hero">
+      <h1>Initial Evaluation Coding — Capture What You Deliver</h1>
+      <p>
+        Initial evaluations are often your highest-effort visits. If every intake is billed as a flat 90792,
+        the claim may under-represent the real time, medical complexity, and psychotherapy work actually delivered.
+      </p>
+    </section>
+
+    <section class="card problem">
+      <h2>1) The Problem</h2>
+      <p><strong>90792 is a flat code (~$150).</strong> It pays about the same for a 45-min or 90-min intake, simple or complex.
+        Billing it on every intake likely under-codes your most valuable visit.</p>
+    </section>
+
+    <section class="card">
+      <h2>2) Better / More Accurate Options</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Instead of flat 90792</th>
+            <th>Use when it's the truer code</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>99204 / 99205</strong> (new patient E/M)</td>
+            <td>High medical decision-making intake</td>
+            <td>99205 = high complexity; often reimburses more than 90792</td>
+          </tr>
+          <tr>
+            <td><strong>99205 + 90838</strong></td>
+            <td>Also performed real psychotherapy (≥53 min)</td>
+            <td>Captures BOTH eval and therapy time; count times <strong>separately</strong></td>
+          </tr>
+          <tr>
+            <td><strong>+ 90785</strong></td>
+            <td>Interactive complexity (collateral informants, difficult disclosure)</td>
+            <td>Legit add-on</td>
+          </tr>
+          <tr>
+            <td><strong>+ 99417</strong> (commercial) / <strong>G2212</strong> (Medicare)</td>
+            <td>Intake genuinely ran long (time-based)</td>
+            <td>Attaches to E/M code, requires documented start/stop times</td>
+          </tr>
+          <tr>
+            <td><strong>+ 95 modifier</strong></td>
+            <td>Telehealth</td>
+            <td>POS 10/02</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="grid-2">
+      <section class="card">
+        <h2>3) Quick Decision Tree</h2>
+        <div class="tree">
+          <div class="node"><strong>Standard, med-focused intake</strong> <span class="arrow">→</span> 90792</div>
+          <div class="node"><strong>Complex + high MDM + ran long</strong> <span class="arrow">→</span> 99204/99205 (± prolonged)</div>
+          <div class="node"><strong>Complex + real psychotherapy (≥53 min)</strong> <span class="arrow">→</span> 99205 + 90838</div>
+          <div class="node"><strong>Interactive complexity present?</strong> <span class="arrow">→</span> add 90785</div>
+          <div class="node"><strong>Telehealth?</strong> <span class="arrow">→</span> add 95 modifier + correct POS</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>4) Ballpark Reimbursement (Illustrative)</h2>
+        <p class="small">Approximate national commercial/Medicare-like ranges; varies by payer and contract. For illustration only.</p>
+        <div class="money">
+          <div class="card">
+            <div class="code">90792</div>
+            <div><strong>~$130–$200</strong></div>
+            <div class="small">Flat psych diagnostic eval</div>
+          </div>
+          <div class="card">
+            <div class="code">99205</div>
+            <div><strong>~$180–$300</strong></div>
+            <div class="small">High-complexity new patient E/M</div>
+          </div>
+          <div class="card">
+            <div class="code">99205 + 90838</div>
+            <div><strong>~$270–$470</strong></div>
+            <div class="small">E/M + distinct 53+ min psychotherapy</div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="card question">
+      <h2>5) THE ONE QUESTION FOR YOUR BILLER</h2>
+      <p><strong>“We currently bill 90792 on every new-patient intake. Given the time and complexity of a psychiatric evaluation, would 99204/99205 (± 90838, ± 90785) reimburse higher with our top payers? Please pull our fee schedule and give a written answer with the highest-paying ACCURATE option for a complex intake.”</strong></p>
+    </section>
+
+    <section class="card reject">
+      <h2>6) Why Claims Reject When Adding Codes</h2>
+      <ul>
+        <li>☐ Add-on billed without a valid primary code</li>
+        <li>☐ Missing modifier (+95, etc.)</li>
+        <li>☐ Time not documented (start/stop times missing)</li>
+        <li>☐ Same-day 90792 + E/M conflict</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
