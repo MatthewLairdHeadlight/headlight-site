@@ -1,0 +1,100 @@
+/**
+ * Design tokens — the single source of truth for the Headlight visual language.
+ * Component CSS must reference these variables rather than hard-coded values.
+ */
+:root {
+  /* Colors */
+  --color-primary: #2C7A8C;
+  --color-primary-dark: #215F6D;
+  --color-primary-light: #4A9BAA;
+  --color-primary-lighter: #6BB8C4;
+  --color-accent: #7CC8D4;
+  --color-accent-pale: #B8E0E8;
+  --color-white: #FFFFFF;
+  --color-surface: #F8FAFB;
+  --color-surface-alt: #EEF5F7;
+  --color-border: #C8D8DC;
+  --color-border-soft: #E8EEF0;
+  --color-text: #1A2E32;
+  --color-text-muted: #4A6670;
+  --color-text-light: #7A9AA0;
+  --color-dark: #1A2E32;
+  --color-dark-soft: #24424A;
+
+  /* Translucent / overlay colors */
+  --color-white-90: rgba(255, 255, 255, 0.9);
+  --color-white-70: rgba(255, 255, 255, 0.7);
+  --color-white-20: rgba(255, 255, 255, 0.2);
+  --color-white-12: rgba(255, 255, 255, 0.12);
+  --color-overlay: rgba(26, 46, 50, 0.55);
+  --color-focus-ring: rgba(124, 200, 212, 0.55);
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(160deg, #215F6D 0%, #2C7A8C 45%, #4A9BAA 100%);
+  --gradient-cta: linear-gradient(120deg, #2C7A8C 0%, #4A9BAA 55%, #6BB8C4 100%);
+  --gradient-soft: linear-gradient(180deg, #FFFFFF 0%, #F8FAFB 60%, #EEF5F7 100%);
+  --gradient-water: linear-gradient(180deg, rgba(124, 200, 212, 0) 0%, rgba(107, 184, 196, 0.9) 45%, rgba(44, 122, 140, 0) 100%);
+
+  /* Typography */
+  --font-family-base: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+  --font-size-5xl: 3.5rem;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --line-height-tight: 1.2;
+  --line-height-base: 1.6;
+  --line-height-relaxed: 1.8;
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-wide: 0.08em;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(44, 122, 140, 0.08);
+  --shadow-md: 0 4px 16px rgba(44, 122, 140, 0.12);
+  --shadow-lg: 0 8px 32px rgba(44, 122, 140, 0.16);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 600ms ease;
+  --transition-drip: 800ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-narrow: 760px;
+  --container-padding: var(--space-6);
+  --nav-height: 72px;
+  --z-background: -1;
+  --z-content: 1;
+  --z-header: 100;
+}
