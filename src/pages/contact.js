@@ -20,7 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
         <h3 style="font-size:var(--text-2xl);color:var(--color-blue-800);margin-bottom:var(--space-4)">Request Received</h3>
         <p style="color:var(--color-text-muted);line-height:var(--leading-relaxed)">
           Thank you — Matthew will follow up within one business day.
-          If it's urgent, please call <a href="tel:+10000000000" style="color:var(--color-blue-600)">(XXX) XXX-XXXX</a>.
+          If it's urgent, please call our Phoenix, AZ office at
+          <a href="tel:+14806187023" style="color:var(--color-blue-600)">480-618-7023</a>
+          or our Portland, OR office at
+          <a href="tel:+15415811080" style="color:var(--color-blue-600)">541-581-1080</a>.
         </p>
       </div>
     `;

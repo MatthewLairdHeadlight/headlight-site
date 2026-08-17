@@ -127,7 +127,7 @@ main { flex: 1; }
 }
 .site-footer__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
   gap: var(--space-8);
 }
 .site-footer__brand-name {

@@ -9,7 +9,7 @@ export const siteHeader = /* html */`
     <div class="site-header__inner">
       <a href="/" class="site-header__brand" aria-label="Headlight Mental Healthcare — Home">
         <span class="site-header__brand-name">Headlight Mental Healthcare</span>
-        <span class="site-header__brand-tagline">Psychiatric Care · Portland, OR</span>
+        <span class="site-header__brand-tagline">Psychiatric Care · Phoenix, AZ &amp; Portland, OR</span>
       </a>
       <nav class="site-nav" role="navigation" aria-label="Main navigation">
         <a href="/">Home</a>
@@ -30,7 +30,7 @@ export const siteFooter = /* html */`
         <div class="site-footer__brand-name">Headlight Mental Healthcare</div>
         <p class="site-footer__tagline">
           Compassionate, evidence-based psychiatric care<br>
-          in Portland, Oregon.
+          in Phoenix, Arizona &amp; Portland, Oregon.
         </p>
         <p style="font-size:var(--text-sm); color:rgba(255,255,255,.55)">
           Matthew Laird, PMHNP-BC<br>
@@ -45,11 +45,28 @@ export const siteFooter = /* html */`
         <a href="/contact/">Contact</a>
       </div>
       <div>
-        <p class="site-footer__heading">Contact</p>
-        <a href="tel:+10000000000">(XXX) XXX-XXXX</a>
-        <a href="/contact/">Request an Appointment</a>
-        <p style="font-size:var(--text-xs);color:rgba(255,255,255,.4);margin-top:var(--space-4);line-height:1.6">
-          Portland, Oregon<br>
+        <p class="site-footer__heading">Phoenix, AZ Office</p>
+        <p style="font-size:var(--text-xs);color:rgba(255,255,255,.55);line-height:1.6;margin-bottom:var(--space-2)">
+          Headlight Mental Healthcare, PLLC<br>
+          2 N Central Ave, Suite 1800<br>
+          Phoenix, AZ 85004
+        </p>
+        <a href="tel:+14806187023">480-618-7023</a>
+        <span style="display:block;font-size:var(--text-xs);color:rgba(255,255,255,.4)">Fax: (480) 781-4866</span>
+        <a href="mailto:welcome@headlightmentalhealthcare.com">welcome@headlightmentalhealthcare.com</a>
+      </div>
+      <div>
+        <p class="site-footer__heading">Portland, OR Office</p>
+        <p style="font-size:var(--text-xs);color:rgba(255,255,255,.55);line-height:1.6;margin-bottom:var(--space-2)">
+          Headlight Mental Healthcare, LLC<br>
+          555 SE MLK Blvd, Unit 105<br>
+          Portland, OR 97214
+        </p>
+        <a href="tel:+15415811080">541-581-1080</a>
+        <span style="display:block;font-size:var(--text-xs);color:rgba(255,255,255,.4)">Fax: 541-588-6525</span>
+        <a href="mailto:welcome@headlightmentalhealthcare.com">welcome@headlightmentalhealthcare.com</a>
+        <p style="font-size:var(--text-xs);color:rgba(255,255,255,.4);margin-top:var(--space-4)">
+          <a href="/contact/">Request an Appointment</a><br>
           Telehealth Available
         </p>
       </div>
