@@ -67,7 +67,6 @@ All shared layout and component styles live in `src/css/base.css`.
 - `src/css/about.css` — About page layout
 - `src/css/contact.css` — Contact form styling
 - `src/css/ken-burns.css` — slideshow presentation
-- `src/css/services.css` — small Services-page-only tweaks
 
 ## Ken Burns component
 
@@ -153,10 +152,6 @@ Deployment is handled by `.github/workflows/deploy.yml`.
 ## HIPAA and contact form note
 
 The contact form is **static only**. It currently provides front-end-only feedback and does not submit data to a backend. Do **not** use it to collect or transmit PHI until a compliant workflow is designed and implemented.
-
-## Placeholder content note
-
-Phone number, address/location language, and other operational details should be treated as placeholders until confirmed by the client/practice owner.
 
 ## Repository notes
 

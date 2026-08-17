@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!form) return;
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
     form.innerHTML = `
       <div style="text-align:center;padding:var(--space-12) var(--space-8)">
         <div style="font-size:3rem;margin-bottom:var(--space-4)">✅</div>

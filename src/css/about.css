@@ -77,7 +77,7 @@
     grid-template-columns: 1fr;
     gap: var(--space-8);
   }
-  .about-credentials__photo {
+  .about-credentials__headshot {
     max-width: 320px;
     margin-inline: auto;
   }
