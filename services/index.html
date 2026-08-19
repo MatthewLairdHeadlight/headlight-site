@@ -6,6 +6,7 @@
   <title>Services | Headlight Mental Healthcare</title>
   <meta name="description" content="Psychiatric evaluation, medication management, and supportive counseling from Matthew Laird, PMHNP-BC in Phoenix, Arizona and Portland, Oregon." />
   <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+  <script>document.documentElement.classList.add("js")</script>
   <script type="module" src="../src/pages/services.js"></script>
 </head>
 <body>
@@ -18,7 +19,7 @@
       <img class="page-banner__bg" src="%BASE_URL%images/stock/clinic-bg.jpg" alt="" role="presentation" fetchpriority="high" />
       <div class="page-banner__scrim" aria-hidden="true"></div>
       <div class="container">
-        <div class="page-banner__content">
+        <div class="page-banner__content reveal">
           <p class="page-banner__eyebrow">What We Offer</p>
           <h1 class="page-banner__title">Services</h1>
           <p class="page-banner__subtitle">
@@ -39,8 +40,11 @@
         </p>
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--space-6)">
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">🧠</div>
+
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+            </div>
             <h3 class="card__title">Psychiatric Evaluation</h3>
             <p class="card__body">
               A thorough initial assessment covering your personal and family history,
@@ -48,49 +52,66 @@
               that actually fits your life.
             </p>
           </article>
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">💊</div>
+
+          <article class="card reveal reveal--d1">
+            <div class="card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>
+            </div>
             <h3 class="card__title">Medication Management</h3>
             <p class="card__body">
               Ongoing prescribing and monitoring with regular follow-up, medication
               adjustments, and open conversation about how you're feeling and what's working.
             </p>
           </article>
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">🤝</div>
+
+          <article class="card reveal reveal--d2">
+            <div class="card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
             <h3 class="card__title">Supportive Counseling</h3>
             <p class="card__body">
               Beyond medication: a real therapeutic relationship that holds space for your
               story, your goals, and the full complexity of being human.
             </p>
           </article>
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">💻</div>
+
+          <article class="card reveal reveal--d3">
+            <div class="card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
             <h3 class="card__title">Telehealth</h3>
             <p class="card__body">
-              Secure video appointments available statewide in Oregon — same quality care,
+              Secure video appointments available statewide — same quality care,
               no commute, and the flexibility to meet you where you are.
             </p>
           </article>
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">🔄</div>
+
+          <article class="card reveal reveal--d4">
+            <div class="card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
+            </div>
             <h3 class="card__title">Medication Transitions</h3>
             <p class="card__body">
               Thoughtful guidance through medication changes, new starts, tapers, and
               the honest conversation about what to expect at each step.
             </p>
           </article>
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">📋</div>
+
+          <article class="card reveal reveal--d5">
+            <div class="card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
             <h3 class="card__title">Collaborative Care</h3>
             <p class="card__body">
               Matthew works alongside your therapist, primary care provider, and other
               specialists to ensure all parts of your care work together, not in silos.
             </p>
           </article>
+
         </div>
 
-        <div style="margin-top:var(--space-12);padding:var(--space-8);background:var(--color-blue-50);border-radius:var(--radius-lg);border:1px solid var(--color-blue-100)">
+        <!-- Conditions Treated -->
+        <div class="reveal" style="margin-top:var(--space-12);padding:var(--space-8);background:var(--color-blue-50);border-radius:var(--radius-lg);border:1px solid var(--color-blue-100)">
           <h3 style="font-size:var(--text-xl);color:var(--color-blue-800);margin-bottom:var(--space-3)">Conditions Treated</h3>
           <div style="display:flex;flex-wrap:wrap;gap:var(--space-2)">
             <span class="condition-pill">Depression</span>
@@ -102,23 +123,71 @@
             <span class="condition-pill">Insomnia</span>
             <span class="condition-pill">Panic Disorder</span>
             <span class="condition-pill">Social Anxiety</span>
+            <span class="condition-pill">Autism Spectrum</span>
             <span class="condition-pill">Grief &amp; Loss</span>
             <span class="condition-pill">Life Transitions</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── GeneSight Callout ──────────────────────────────────────────────── -->
+    <section class="section section--alt" aria-labelledby="genesight-heading">
+      <div class="container">
+        <div class="genesight-callout reveal">
+          <div class="genesight-callout__inner">
+            <div class="genesight-callout__logo">
+              <img
+                src="%BASE_URL%images/genesight-logo.svg"
+                alt="GeneSight"
+                width="160"
+                height="48"
+                loading="lazy"
+              />
+            </div>
+            <div class="genesight-callout__body">
+              <p class="section__eyebrow" style="margin-bottom:var(--space-2)">A Tool of Precision Care</p>
+              <h2 id="genesight-heading" style="font-size:var(--text-2xl);color:var(--color-blue-800);margin-bottom:var(--space-3)">Your genetics, informing your medication.</h2>
+              <p style="color:var(--color-text-muted);line-height:var(--leading-relaxed);max-width:600px">
+                Finding the right psychiatric medication can feel like trial and error — because without
+                genetic information, it often is. GeneSight is a simple cheek-swab test that analyzes
+                how your genes interact with dozens of mental health medications, placing each in a
+                green / yellow / red category so Matthew can personalize your treatment from the start.
+                Guided prescribing has been shown to produce significantly higher remission rates,
+                and insurance often covers the test.
+              </p>
+            </div>
+            <div class="genesight-callout__cta">
+              <a
+                href="https://headlightmentalhealthcare.com/genesight/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn--outline"
+              >Learn More</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ── CTA ──────────────────────────────────────────────────────────── -->
     <section class="section section--dark" aria-label="Get started">
       <div class="container" style="text-align:center">
-        <h2 class="section__heading">Ready to Begin?</h2>
-        <p class="section__lead" style="margin-inline:auto;text-align:center">
+        <h2 class="section__heading reveal">Ready to Begin?</h2>
+        <p class="section__lead reveal reveal--d1" style="margin-inline:auto;text-align:center">
           New patients welcome. Same-week appointments often available.
         </p>
-        <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;margin-top:var(--space-8)">
+        <div class="reveal reveal--d2" style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;margin-top:var(--space-8)">
           <a href="%BASE_URL%contact/" class="btn btn--primary btn--lg">Start Secure Intake</a>
-          <a href="tel:+14806187023" class="btn btn--outline-white btn--lg">📞 Phoenix, AZ</a>
-          <a href="tel:+15415811080" class="btn btn--outline-white btn--lg">📞 Portland, OR</a>
+          <a href="tel:+14806187023" class="btn btn--outline-white btn--lg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Phoenix, AZ
+          </a>
+          <a href="tel:+15415811080" class="btn btn--outline-white btn--lg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Portland, OR
+          </a>
         </div>
       </div>
     </section>

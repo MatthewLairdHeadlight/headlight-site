@@ -24,3 +24,32 @@ export function initStickyHeader() {
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 }
+
+// Scroll-reveal: fade + gentle rise on scroll
+// Fully respects prefers-reduced-motion (opacity-only or instant show)
+export function initScrollReveal() {
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const targets = document.querySelectorAll('.reveal');
+  if (!targets.length) return;
+
+  if (reduced) {
+    // Skip animation — just make everything visible immediately
+    targets.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+  );
+
+  targets.forEach(el => observer.observe(el));
+}

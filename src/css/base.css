@@ -393,3 +393,227 @@ main { flex: 1; }
   color: var(--color-blue-700);
   font-family: var(--font-ui);
 }
+
+/* ─── Site header logo ──────────────────────────────────────────────────── */
+.site-header__logo {
+  width: 160px;
+  height: auto;
+  display: block;
+}
+.site-footer__logo {
+  width: 140px;
+  height: auto;
+  display: block;
+  margin-bottom: var(--space-4);
+  /* invert to white for dark footer */
+  filter: brightness(0) invert(1);
+  opacity: .88;
+}
+
+/* ─── Footer PT badge ───────────────────────────────────────────────────── */
+.site-footer__pt-link { margin-top: var(--space-4); }
+.site-footer__pt-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,.6);
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: var(--radius-full);
+  padding: var(--space-1) var(--space-3);
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+.site-footer__pt-badge:hover {
+  color: var(--color-white);
+  border-color: rgba(255,255,255,.45);
+}
+
+/* ─── Scroll-reveal motion system ───────────────────────────────────────── */
+/* Gate hidden state on JS availability: if JS is blocked, content stays visible */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 580ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 580ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* Stagger delays — applied to sibling elements */
+.js .reveal--d1 { transition-delay: 90ms; }
+.js .reveal--d2 { transition-delay: 180ms; }
+.js .reveal--d3 { transition-delay: 270ms; }
+.js .reveal--d4 { transition-delay: 360ms; }
+.js .reveal--d5 { transition-delay: 450ms; }
+
+/* Visible state — added by IntersectionObserver */
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Reduced-motion: no translate, opacity-only */
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal {
+    transform: none;
+    transition: opacity 300ms ease;
+  }
+  .js .reveal--d1,
+  .js .reveal--d2,
+  .js .reveal--d3,
+  .js .reveal--d4,
+  .js .reveal--d5 { transition-delay: 0ms; }
+}
+
+/* ─── Card icon: accept SVG children ────────────────────────────────────── */
+.card__icon svg {
+  display: block;
+  color: var(--color-blue-600);
+}
+
+/* ─── Credentials list icon: SVG ────────────────────────────────────────── */
+.credentials-list__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-blue-500);
+  margin-top: 2px;
+}
+.credentials-list__icon svg {
+  display: block;
+}
+
+/* ─── Affiliations grid ─────────────────────────────────────────────────── */
+.affiliations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-5);
+  margin-top: var(--space-8);
+}
+
+.affiliation-card {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+.affiliation-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.affiliation-card__icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: var(--color-blue-50);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-blue-600);
+}
+.affiliation-card__name {
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  color: var(--color-blue-800);
+  margin-bottom: var(--space-1);
+}
+.affiliation-card__detail {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+}
+.affiliation-card__link {
+  color: var(--color-blue-600);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color var(--transition-fast);
+}
+.affiliation-card__link:hover {
+  text-decoration-color: var(--color-blue-400);
+}
+
+/* ─── Psychology Today profile callout ──────────────────────────────────── */
+.pt-profile-callout {
+  border: 1px solid var(--color-blue-200);
+  border-radius: var(--radius-lg);
+  background: var(--color-blue-50);
+  overflow: hidden;
+}
+.pt-profile-callout__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  padding: var(--space-6) var(--space-8);
+  flex-wrap: wrap;
+}
+.pt-profile-callout__label {
+  font-size: var(--text-xs);
+  font-family: var(--font-ui);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--color-blue-500);
+  margin-bottom: var(--space-1);
+}
+.pt-profile-callout__name {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-blue-800);
+  margin-bottom: var(--space-1);
+}
+.pt-profile-callout__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  max-width: 480px;
+}
+
+/* ─── GeneSight callout ─────────────────────────────────────────────────── */
+.genesight-callout {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.genesight-callout__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-8) var(--space-10);
+  flex-wrap: wrap;
+}
+.genesight-callout__logo {
+  flex-shrink: 0;
+}
+.genesight-callout__logo img {
+  max-width: 160px;
+  height: auto;
+}
+.genesight-callout__body {
+  flex: 1;
+  min-width: 260px;
+}
+.genesight-callout__cta {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .genesight-callout__inner {
+    padding: var(--space-6);
+    gap: var(--space-5);
+  }
+  .affiliations-grid {
+    grid-template-columns: 1fr;
+  }
+  .pt-profile-callout__inner {
+    padding: var(--space-5);
+  }
+}
