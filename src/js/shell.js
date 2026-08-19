@@ -5,12 +5,21 @@
 
 const baseUrl = import.meta.env.BASE_URL;
 
+/* ── Inline SVG helpers ─────────────────────────────────────────────────── */
+const phoneIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16" style="flex-shrink:0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`;
+
 export const siteHeader = /* html */`
 <header class="site-header" role="banner">
   <div class="container">
     <div class="site-header__inner">
       <a href="${baseUrl}" class="site-header__brand" aria-label="Headlight Mental Healthcare — Home">
-        <span class="site-header__brand-name">Headlight Mental Healthcare</span>
+        <img
+          src="${baseUrl}images/logo.svg"
+          alt="Headlight Mental Healthcare"
+          class="site-header__logo"
+          width="180"
+          height="55"
+        />
         <span class="site-header__brand-tagline">Psychiatric Care · Phoenix, AZ &amp; Portland, OR</span>
       </a>
       <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -29,7 +38,15 @@ export const siteFooter = /* html */`
   <div class="container">
     <div class="site-footer__inner">
       <div>
-        <div class="site-footer__brand-name">Headlight Mental Healthcare</div>
+        <a href="${baseUrl}" aria-label="Headlight Mental Healthcare — Home">
+          <img
+            src="${baseUrl}images/logo.svg"
+            alt="Headlight Mental Healthcare"
+            class="site-footer__logo"
+            width="160"
+            height="49"
+          />
+        </a>
         <p class="site-footer__tagline">
           Compassionate, evidence-based psychiatric care<br>
           in Phoenix, Arizona &amp; Portland, Oregon.
@@ -38,6 +55,12 @@ export const siteFooter = /* html */`
           Matthew Laird, PMHNP-BC<br>
           Board Certified Psychiatric Nurse Practitioner
         </p>
+        <div class="site-footer__pt-link">
+          <a href="https://www.psychologytoday.com/us/psychiatrists/headlight-mental-healthcare-pllc-phoenix-az/1234382" target="_blank" rel="noopener noreferrer" class="site-footer__pt-badge" aria-label="Verified on Psychology Today (opens in new tab)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14" aria-hidden="true"><circle cx="10" cy="10" r="8"/><polyline points="7 10 9.5 12.5 14 7.5"/></svg>
+            Psychology Today Profile
+          </a>
+        </div>
       </div>
       <div>
         <p class="site-footer__heading">Navigate</p>
