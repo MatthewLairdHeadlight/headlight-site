@@ -617,3 +617,138 @@ main { flex: 1; }
     padding: var(--space-5);
   }
 }
+
+/* ─── GeneSight page components ─────────────────────────────────────────── */
+.gs-intro {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-12);
+  flex-wrap: wrap;
+}
+.gs-intro__logo {
+  flex-shrink: 0;
+  padding-top: var(--space-2);
+}
+.gs-intro__logo img {
+  max-width: 200px;
+  height: auto;
+}
+.gs-intro__body {
+  flex: 1;
+  min-width: 260px;
+}
+
+.gs-evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-10);
+}
+.gs-evidence-link {
+  font-size: var(--text-sm);
+  color: var(--color-blue-600);
+  font-weight: var(--weight-medium);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color var(--transition-fast);
+}
+.gs-evidence-link:hover {
+  text-decoration-color: var(--color-blue-400);
+}
+
+.gs-steps {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--space-10);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 720px;
+}
+.gs-step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-6);
+}
+.gs-step__number {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-blue-600);
+  color: #fff;
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+.gs-step__content {
+  flex: 1;
+}
+.gs-step__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  color: var(--color-blue-800);
+  margin-bottom: var(--space-2);
+}
+.gs-step__desc {
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+}
+
+.gs-insurance-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-8);
+  padding: var(--space-10) var(--space-10);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  flex-wrap: wrap;
+}
+.gs-insurance-card__icon {
+  flex-shrink: 0;
+  color: var(--color-blue-500);
+  padding-top: var(--space-1);
+}
+.gs-insurance-card__body {
+  flex: 1;
+  min-width: 260px;
+}
+.gs-insurance-card__link {
+  color: var(--color-blue-600);
+  font-weight: var(--weight-medium);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color var(--transition-fast);
+}
+.gs-insurance-card__link:hover {
+  text-decoration-color: var(--color-blue-400);
+}
+
+@media (max-width: 768px) {
+  .gs-intro {
+    gap: var(--space-6);
+  }
+  .gs-intro__logo img {
+    max-width: 160px;
+  }
+  .gs-step {
+    gap: var(--space-4);
+  }
+  .gs-step__number {
+    width: 40px;
+    height: 40px;
+    font-size: var(--text-base);
+  }
+  .gs-insurance-card {
+    padding: var(--space-6);
+    gap: var(--space-5);
+  }
+}
