@@ -3,19 +3,21 @@
  * Keeps header/footer DRY across multi-page Vite builds.
  */
 
+const baseUrl = import.meta.env.BASE_URL;
+
 export const siteHeader = /* html */`
 <header class="site-header" role="banner">
   <div class="container">
     <div class="site-header__inner">
-      <a href="/" class="site-header__brand" aria-label="Headlight Mental Healthcare — Home">
+      <a href="${baseUrl}" class="site-header__brand" aria-label="Headlight Mental Healthcare — Home">
         <span class="site-header__brand-name">Headlight Mental Healthcare</span>
         <span class="site-header__brand-tagline">Psychiatric Care · Phoenix, AZ &amp; Portland, OR</span>
       </a>
       <nav class="site-nav" role="navigation" aria-label="Main navigation">
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/services/">Services</a>
-        <a href="/contact/" class="site-nav__cta">Request Appointment</a>
+        <a href="${baseUrl}">Home</a>
+        <a href="${baseUrl}about/">About</a>
+        <a href="${baseUrl}services/">Services</a>
+        <a href="${baseUrl}contact/" class="site-nav__cta">Request Appointment</a>
       </nav>
     </div>
   </div>
@@ -39,10 +41,10 @@ export const siteFooter = /* html */`
       </div>
       <div>
         <p class="site-footer__heading">Navigate</p>
-        <a href="/">Home</a>
-        <a href="/about/">About Matthew</a>
-        <a href="/services/">Services</a>
-        <a href="/contact/">Contact</a>
+        <a href="${baseUrl}">Home</a>
+        <a href="${baseUrl}about/">About Matthew</a>
+        <a href="${baseUrl}services/">Services</a>
+        <a href="${baseUrl}contact/">Contact</a>
       </div>
       <div>
         <p class="site-footer__heading">Phoenix, AZ Office</p>
@@ -66,7 +68,7 @@ export const siteFooter = /* html */`
         <span style="display:block;font-size:var(--text-xs);color:rgba(255,255,255,.4)">Fax: 541-588-6525</span>
         <a href="mailto:welcome@headlightmentalhealthcare.com">welcome@headlightmentalhealthcare.com</a>
         <p style="font-size:var(--text-xs);color:rgba(255,255,255,.4);margin-top:var(--space-4)">
-          <a href="/contact/">Request an Appointment</a><br>
+          <a href="${baseUrl}contact/">Request an Appointment</a><br>
           Telehealth Available
         </p>
       </div>

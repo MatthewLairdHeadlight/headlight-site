@@ -4,7 +4,8 @@ import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/headlight-site/' : '/',
   root: '.',
   publicDir: 'assets',
   build: {
@@ -12,8 +13,8 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main:    resolve(__dirname, 'index.html'),
-        about:   resolve(__dirname, 'about/index.html'),
+        main: resolve(__dirname, 'index.html'),
+        about: resolve(__dirname, 'about/index.html'),
         services: resolve(__dirname, 'services/index.html'),
         contact: resolve(__dirname, 'contact/index.html'),
       },
@@ -22,4 +23,4 @@ export default defineConfig({
   server: {
     open: true,
   },
-});
+}));
