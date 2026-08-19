@@ -6,7 +6,7 @@
 const baseUrl = import.meta.env.BASE_URL;
 
 /* ── Inline SVG helpers ─────────────────────────────────────────────────── */
-const phoneIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16" style="flex-shrink:0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`;
+const phoneIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`;
 
 export const siteHeader = /* html */`
 <header class="site-header" role="banner">
@@ -56,8 +56,8 @@ export const siteFooter = /* html */`
           Board Certified Psychiatric Nurse Practitioner
         </p>
         <div class="site-footer__pt-link">
-          <a href="https://www.psychologytoday.com/us/psychiatrists/headlight-mental-healthcare-pllc-phoenix-az/1234382" target="_blank" rel="noopener noreferrer" class="site-footer__pt-badge" aria-label="Verified on Psychology Today (opens in new tab)">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14" aria-hidden="true"><circle cx="10" cy="10" r="8"/><polyline points="7 10 9.5 12.5 14 7.5"/></svg>
+          <a href="https://www.psychologytoday.com/us/psychiatrists/headlight-mental-healthcare-pllc-phoenix-az/1234382" target="_blank" rel="noopener noreferrer" class="site-footer__pt-badge" aria-label="Psychology Today Profile (opens in new tab)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14" aria-hidden="true"><circle cx="10" cy="10" r="8"/></svg>
             Psychology Today Profile
           </a>
         </div>
@@ -68,6 +68,8 @@ export const siteFooter = /* html */`
         <a href="${baseUrl}about/">About Matthew</a>
         <a href="${baseUrl}services/">Services</a>
         <a href="${baseUrl}contact/">Contact</a>
+        <a href="https://headlightmentalhealthcare.com/faqs/" target="_blank" rel="noopener noreferrer">FAQs</a>
+        <a href="https://headlightmentalhealthcare.com/communication-policy/" target="_blank" rel="noopener noreferrer">Communication Policy</a>
       </div>
       <div>
         <p class="site-footer__heading">Phoenix, AZ Office</p>
@@ -92,6 +94,7 @@ export const siteFooter = /* html */`
         <a href="mailto:welcome@headlightmentalhealthcare.com">welcome@headlightmentalhealthcare.com</a>
         <p style="font-size:var(--text-xs);color:rgba(255,255,255,.4);margin-top:var(--space-4)">
           <a href="${baseUrl}contact/">Start Secure Intake</a><br>
+          <a href="https://www.carecredit.com/go/253XCW/?dtc=DS1X&sitecode=h2mdo9bg10" target="_blank" rel="noopener noreferrer">Financing via CareCredit&reg;</a><br>
           Telehealth Available
         </p>
       </div>
