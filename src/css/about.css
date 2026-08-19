@@ -71,6 +71,10 @@
   color: var(--color-gray-700);
 }
 
+.ken-burns {
+  min-height: 560px;
+}
+
 /* ─── Responsive ────────────────────────────────────────────────────────── */
 @media (max-width: 900px) {
   .about-credentials {
@@ -80,5 +84,11 @@
   .about-credentials__headshot {
     max-width: 320px;
     margin-inline: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .ken-burns {
+    min-height: 360px;
   }
 }

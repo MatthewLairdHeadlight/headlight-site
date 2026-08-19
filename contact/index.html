@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Request an Appointment | Headlight Mental Healthcare</title>
-  <meta name="description" content="Request a psychiatric appointment with Matthew Laird, PMHNP-BC. Phoenix, Arizona; Portland, Oregon; and telehealth." />
+  <title>Start Secure Intake | Headlight Mental Healthcare</title>
+  <meta name="description" content="Start your secure IntakeQ new patient screening and appointment request with Matthew Laird, PMHNP-BC. Phoenix, Arizona; Portland, Oregon; and telehealth." />
   <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
   <script type="module" src="../src/pages/contact.js"></script>
 </head>
@@ -14,15 +14,15 @@
 
   <main id="main-content">
 
-    <section class="page-banner" aria-label="Request an Appointment">
+    <section class="page-banner" aria-label="Start secure intake">
       <img class="page-banner__bg" src="%BASE_URL%images/stock/water-reflection.jpg" alt="" role="presentation" fetchpriority="high" />
       <div class="page-banner__scrim" aria-hidden="true"></div>
       <div class="container">
         <div class="page-banner__content">
           <p class="page-banner__eyebrow">Get Started</p>
-          <h1 class="page-banner__title">Request an Appointment</h1>
+          <h1 class="page-banner__title">Start Your Secure Intake</h1>
           <p class="page-banner__subtitle">
-            New patients welcome. We'll get back to you within one business day.
+            New patients welcome. Complete the secure IntakeQ form and we'll get back to you within one business day.
           </p>
         </div>
       </div>
@@ -30,14 +30,14 @@
 
     <section class="section" aria-labelledby="contact-heading">
       <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-16);align-items:start">
+        <div class="stack-layout stack-layout--start">
 
-          <div>
+          <div class="contact-info">
             <p class="section__eyebrow">Reach Out</p>
             <h2 class="section__heading" id="contact-heading">How to Connect</h2>
             <p style="font-size:var(--text-lg);color:var(--color-text-muted);line-height:var(--leading-relaxed);margin-bottom:var(--space-8)">
-              The intake process is simple and straightforward. Use the form to request
-              an appointment, or call directly — Matthew answers his own messages.
+              The intake process is simple and straightforward. Complete the secure IntakeQ
+              form to request an appointment, or call directly — Matthew answers his own messages.
             </p>
 
             <div style="display:flex;flex-direction:column;gap:var(--space-6)">
@@ -89,38 +89,24 @@
           </div>
 
           <div>
-            <form class="contact-form" aria-labelledby="form-heading" novalidate>
-              <h3 id="form-heading" style="font-size:var(--text-xl);color:var(--color-blue-800);margin-bottom:var(--space-6)">Request an Appointment</h3>
-
-              <div class="form-field">
-                <label for="name" class="form-label">Full Name <span aria-hidden="true">*</span></label>
-                <input type="text" id="name" name="name" class="form-input" required autocomplete="name" />
-              </div>
-              <div class="form-field">
-                <label for="email" class="form-label">Email Address <span aria-hidden="true">*</span></label>
-                <input type="email" id="email" name="email" class="form-input" required autocomplete="email" />
-              </div>
-              <div class="form-field">
-                <label for="phone" class="form-label">Phone Number</label>
-                <input type="tel" id="phone" name="phone" class="form-input" autocomplete="tel" />
-              </div>
-              <div class="form-field">
-                <label for="insurance" class="form-label">Insurance (if applicable)</label>
-                <input type="text" id="insurance" name="insurance" class="form-input" />
-              </div>
-              <div class="form-field">
-                <label for="message" class="form-label">What brings you in? <span aria-hidden="true">*</span></label>
-                <textarea id="message" name="message" class="form-input form-textarea" rows="4" required></textarea>
-              </div>
-
-              <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;margin-top:var(--space-2)">
-                Send Request
-              </button>
-              <p style="font-size:var(--text-xs);color:var(--color-text-muted);margin-top:var(--space-3);text-align:center;line-height:var(--leading-relaxed)">
-                This form is for appointment requests only. For a mental health emergency,
-                please call 988 or 911.
+            <div class="contact-intake" aria-labelledby="form-heading">
+              <h3 id="form-heading" style="font-size:var(--text-xl);color:var(--color-blue-800);margin-bottom:var(--space-4)">New Patient Screening &amp; Appointment Request</h3>
+              <p class="contact-intake__intro">
+                This intake form is secure and handled by IntakeQ, our HIPAA-compliant patient intake platform.
               </p>
-            </form>
+              <div class="contact-intake__frame">
+                <iframe
+                  class="contact-intake__iframe"
+                  src="https://intakeq.com/new/dtglwx"
+                  title="Secure IntakeQ new patient screening and appointment request form"
+                  loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                ></iframe>
+              </div>
+              <p class="contact-intake__fallback">
+                If the secure form does not load for you, <a href="https://intakeq.com/new/dtglwx" target="_blank" rel="noopener noreferrer">open the IntakeQ intake in a new tab</a>.
+              </p>
+            </div>
           </div>
 
         </div>

@@ -17,7 +17,7 @@ export const siteHeader = /* html */`
         <a href="${baseUrl}">Home</a>
         <a href="${baseUrl}about/">About</a>
         <a href="${baseUrl}services/">Services</a>
-        <a href="${baseUrl}contact/" class="site-nav__cta">Request Appointment</a>
+        <a href="${baseUrl}contact/" class="site-nav__cta">Start Intake</a>
       </nav>
     </div>
   </div>
@@ -68,7 +68,7 @@ export const siteFooter = /* html */`
         <span style="display:block;font-size:var(--text-xs);color:rgba(255,255,255,.4)">Fax: 541-588-6525</span>
         <a href="mailto:welcome@headlightmentalhealthcare.com">welcome@headlightmentalhealthcare.com</a>
         <p style="font-size:var(--text-xs);color:rgba(255,255,255,.4);margin-top:var(--space-4)">
-          <a href="${baseUrl}contact/">Request an Appointment</a><br>
+          <a href="${baseUrl}contact/">Start Secure Intake</a><br>
           Telehealth Available
         </p>
       </div>
