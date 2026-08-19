@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" role="img" aria-label="GeneSight">
+  <title>GeneSight</title>
+  <!-- DNA helix motif -->
+  <g fill="none" stroke-width="2.2" stroke-linecap="round">
+    <!-- left strand -->
+    <path d="M8 10 C12 20, 8 30, 12 40 C16 50, 12 55, 16 58" stroke="#0476EB"/>
+    <!-- right strand -->
+    <path d="M22 10 C18 20, 22 30, 18 40 C14 50, 18 55, 14 58" stroke="#0476EB"/>
+    <!-- rungs -->
+    <line x1="9" y1="19" x2="21" y2="19" stroke="#7ab8f5" stroke-width="1.5"/>
+    <line x1="10" y1="28" x2="20" y2="28" stroke="#7ab8f5" stroke-width="1.5"/>
+    <line x1="10" y1="37" x2="20" y2="37" stroke="#7ab8f5" stroke-width="1.5"/>
+    <line x1="12" y1="46" x2="18" y2="46" stroke="#7ab8f5" stroke-width="1.5"/>
+  </g>
+  <!-- wordmark -->
+  <text x="34" y="38" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#0476EB" letter-spacing="-0.5">Gene</text>
+  <text x="95" y="38" font-family="Georgia, serif" font-size="22" font-weight="400" fill="#1a3a5c" letter-spacing="-0.5">Sight</text>
+</svg>

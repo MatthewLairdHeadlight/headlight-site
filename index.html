@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Headlight Mental Healthcare | Phoenix, AZ &amp; Portland, OR</title>
-  <meta name="description" content="Compassionate, evidence-based psychiatric care from Matthew Laird, PMHNP-BC. Serving Phoenix, Arizona; Portland, Oregon; and via telehealth." />
+  <meta name="description" content="Compassionate, evidence-based psychiatric care from Matthew Laird, PMHNP-BC. Certified Autism Specialist. LGBTQ+ affirming care. Serving Phoenix, Arizona; Portland, Oregon; and via telehealth." />
   <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <script type="module" src="./src/pages/index.js"></script>
@@ -26,15 +26,16 @@
       />
       <div class="page-banner__scrim" aria-hidden="true"></div>
       <div class="container">
-        <div class="page-banner__content">
+        <div class="page-banner__content reveal">
           <p class="page-banner__eyebrow">Headlight Mental Healthcare</p>
           <h1 class="page-banner__title">
-            Psychiatric Care<br>
-            <em style="font-style:normal;color:var(--color-blue-300)">with Heart.</em>
+            You deserve care<br>
+            <em style="font-style:normal;color:var(--color-blue-300)">that sees you.</em>
           </h1>
           <p class="page-banner__subtitle">
-            Evidence-based treatment, compassionate listening, and genuine partnership
-            in your mental health journey.
+            Evidence-based psychiatric treatment, compassionate listening,
+            and a genuine partnership — from a provider who treats the whole person,
+            not just the diagnosis.
           </p>
           <div style="display:flex;gap:var(--space-4);flex-wrap:wrap;margin-top:var(--space-8)">
             <a href="%BASE_URL%contact/" class="btn btn--primary btn--lg">Start Secure Intake</a>
@@ -48,19 +49,23 @@
     <section class="section section--alt" aria-label="Credentials at a glance">
       <div class="container">
         <div class="trust-bar" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:var(--space-8);text-align:center">
-          <div>
+          <div class="reveal">
             <div style="font-size:var(--text-3xl);font-family:var(--font-ui);font-weight:700;color:var(--color-blue-600)">20+</div>
             <div style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-1)">Years of Experience</div>
           </div>
-          <div>
+          <div class="reveal reveal--d1">
             <div style="font-size:var(--text-3xl);font-family:var(--font-ui);font-weight:700;color:var(--color-blue-600)">PMHNP-BC</div>
             <div style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-1)">Board Certified</div>
           </div>
-          <div>
-            <div style="font-size:var(--text-3xl);font-family:var(--font-ui);font-weight:700;color:var(--color-blue-600)">Oregon</div>
-            <div style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-1)">Licensed &amp; Practicing</div>
+          <div class="reveal reveal--d2">
+            <div style="font-size:var(--text-3xl);font-family:var(--font-ui);font-weight:700;color:var(--color-blue-600)">CAS</div>
+            <div style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-1)">Certified Autism Specialist</div>
           </div>
-          <div>
+          <div class="reveal reveal--d3">
+            <div style="font-size:var(--text-3xl);font-family:var(--font-ui);font-weight:700;color:var(--color-blue-600)">LGBTQ+</div>
+            <div style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-1)">Affirming Care</div>
+          </div>
+          <div class="reveal reveal--d4">
             <div style="font-size:var(--text-3xl);font-family:var(--font-ui);font-weight:700;color:var(--color-blue-600)">Telehealth</div>
             <div style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-1)">Available Statewide</div>
           </div>
@@ -68,8 +73,41 @@
       </div>
     </section>
 
+    <!-- ── Why Matthew — StoryBrand ──────────────────────────────────────── -->
+    <section class="section" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="stack-layout stack-layout--center">
+          <div class="reveal">
+            <p class="section__eyebrow">Your Guide, Not Your Gatekeeper</p>
+            <h2 class="section__heading" id="why-heading">You're the hero of this story.</h2>
+            <p class="section__lead">
+              You've been carrying something heavy. You've likely tried explaining it to people
+              who nodded but didn't quite get it. Matthew Laird has spent 20+ years learning to
+              actually listen — and then doing something useful about what he hears.
+            </p>
+            <p style="color:var(--color-text-muted);line-height:var(--leading-relaxed);margin-bottom:var(--space-6)">
+              As a <strong>Certified Autism Specialist</strong>, he understands the nuance of
+              neurodivergent presentations that other providers miss. As an
+              <strong>LGBTQ+ affirming provider</strong>, he creates a space where you don't have
+              to translate yourself. And as a clinician with two decades of experience,
+              he knows which tools actually work.
+            </p>
+            <a href="%BASE_URL%about/" class="btn btn--outline">Meet Matthew</a>
+          </div>
+          <div class="reveal reveal--d1" style="border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-xl)">
+            <img
+              src="%BASE_URL%images/stock/matthew-headshot.jpg"
+              alt="Matthew Laird, PMHNP-BC"
+              style="width:100%;height:380px;object-fit:cover;object-position:center top;display:block"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ── Services overview ─────────────────────────────────────────────── -->
-    <section class="section" aria-labelledby="services-heading">
+    <section class="section section--alt" aria-labelledby="services-heading">
       <div class="container">
         <p class="section__eyebrow">What We Offer</p>
         <h2 class="section__heading" id="services-heading">Evidence-Based Care</h2>
@@ -78,18 +116,24 @@
           evidence, and deep respect for your experience.
         </p>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--space-6)">
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">🧠</div>
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+            </div>
             <h3 class="card__title">Psychiatric Evaluation</h3>
-            <p class="card__body">Comprehensive assessment of your mental health history, symptoms, and goals to build a personalized treatment plan.</p>
+            <p class="card__body">Comprehensive assessment of your mental health history, symptoms, and goals to build a treatment plan that actually fits your life.</p>
           </article>
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">💊</div>
+          <article class="card reveal reveal--d1">
+            <div class="card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>
+            </div>
             <h3 class="card__title">Medication Management</h3>
-            <p class="card__body">Thoughtful prescribing, ongoing monitoring, and collaborative adjustments based on how you're actually doing—not just numbers.</p>
+            <p class="card__body">Thoughtful prescribing, ongoing monitoring, and collaborative adjustments based on how you're actually doing — not just numbers.</p>
           </article>
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">🤝</div>
+          <article class="card reveal reveal--d2">
+            <div class="card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
             <h3 class="card__title">Supportive Counseling</h3>
             <p class="card__body">A genuine therapeutic relationship, not a prescription pad. Matthew listens, adapts, and partners with you in the full picture of your health.</p>
           </article>
@@ -100,44 +144,24 @@
       </div>
     </section>
 
-    <!-- ── Meet Matthew teaser ───────────────────────────────────────────── -->
-    <section class="section section--dark" aria-labelledby="meet-heading">
-      <div class="container">
-        <div class="stack-layout stack-layout--center">
-          <div>
-            <p class="section__eyebrow" style="color:var(--color-blue-300)">The Person Behind the Practice</p>
-            <h2 class="section__heading" id="meet-heading">Meet Matthew</h2>
-            <p class="section__lead" style="margin-bottom:var(--space-6)">
-              Twenty years of psychiatric nursing. A life lived outdoors — on trails, on bikes,
-              in the mountains. Matthew brings the full measure of who he is to every patient
-              relationship.
-            </p>
-            <a href="%BASE_URL%about/" class="btn btn--outline-white">About Matthew</a>
-          </div>
-          <div style="border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-xl)">
-            <img
-              src="%BASE_URL%images/stock/matthew-headshot.jpg"
-              alt="Matthew Laird, PMHNP-BC"
-              style="width:100%;height:320px;object-fit:cover;object-position:center top;display:block"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ── CTA strip ─────────────────────────────────────────────────────── -->
-    <section class="section" aria-label="Get started">
+    <section class="section section--dark" aria-label="Get started">
       <div class="container" style="text-align:center">
-        <h2 class="section__heading">Ready to Take the First Step?</h2>
-        <p class="section__lead" style="margin-inline:auto;text-align:center">
+        <h2 class="section__heading reveal">Ready to Take the First Step?</h2>
+        <p class="section__lead reveal reveal--d1" style="margin-inline:auto;text-align:center">
           Reaching out is the hardest part. We make the rest easy — same-week appointments,
           straightforward intake, and a provider who answers his own messages.
         </p>
-        <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;margin-top:var(--space-8)">
+        <div class="reveal reveal--d2" style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;margin-top:var(--space-8)">
           <a href="%BASE_URL%contact/" class="btn btn--primary btn--lg">Start Secure Intake</a>
-          <a href="tel:+14806187023" class="btn btn--outline btn--lg">📞 Phoenix, AZ</a>
-          <a href="tel:+15415811080" class="btn btn--outline btn--lg">📞 Portland, OR</a>
+          <a href="tel:+14806187023" class="btn btn--outline-white btn--lg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Phoenix, AZ
+          </a>
+          <a href="tel:+15415811080" class="btn btn--outline-white btn--lg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Portland, OR
+          </a>
         </div>
       </div>
     </section>
