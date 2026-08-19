@@ -45,6 +45,8 @@ export const siteFooter = /* html */`
         <a href="${baseUrl}about/">About Matthew</a>
         <a href="${baseUrl}services/">Services</a>
         <a href="${baseUrl}contact/">Contact</a>
+        <a href="https://headlightmentalhealthcare.com/faqs/" target="_blank" rel="noopener">FAQs</a>
+        <a href="https://headlightmentalhealthcare.com/communication-policy/" target="_blank" rel="noopener">Communication Policy</a>
       </div>
       <div>
         <p class="site-footer__heading">Phoenix, AZ Office</p>
@@ -69,6 +71,7 @@ export const siteFooter = /* html */`
         <a href="mailto:welcome@headlightmentalhealthcare.com">welcome@headlightmentalhealthcare.com</a>
         <p style="font-size:var(--text-xs);color:rgba(255,255,255,.4);margin-top:var(--space-4)">
           <a href="${baseUrl}contact/">Start Secure Intake</a><br>
+          <a href="https://www.carecredit.com/go/253XCW/?dtc=DS1X&sitecode=h2mdo9bg10" target="_blank" rel="noopener">Financing via CareCredit®</a><br>
           Telehealth Available
         </p>
       </div>
