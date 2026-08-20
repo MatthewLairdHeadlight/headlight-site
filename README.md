@@ -4,11 +4,12 @@ Static multi-page marketing site for **Headlight Mental Healthcare** and **Matth
 
 ## Project Overview
 
-This repository contains a four-page brochure site:
+This repository contains a five-page brochure site:
 
 - `/` — Home
 - `/about/` — About Matthew
 - `/services/` — Services
+- `/genesight/` — GeneSight pharmacogenomics testing
 - `/contact/` — Contact
 
 The experience is intentionally simple: fast static pages, shared shell components, curated photography, and lightweight JavaScript for page-level enhancements.
@@ -17,11 +18,12 @@ The experience is intentionally simple: fast static pages, shared shell componen
 
 ### Multi-page Vite setup
 
-`vite.config.js` defines four HTML entry points:
+`vite.config.js` defines five HTML entry points:
 
 - `index.html`
 - `about/index.html`
 - `services/index.html`
+- `genesight/index.html`
 - `contact/index.html`
 
 Each page loads a matching page module from `src/pages/`:
@@ -29,6 +31,7 @@ Each page loads a matching page module from `src/pages/`:
 - `src/pages/index.js`
 - `src/pages/about.js`
 - `src/pages/services.js`
+- `src/pages/genesight.js`
 - `src/pages/contact.js`
 
 ### Shared components
@@ -100,17 +103,39 @@ The About page slideshow uses:
 
 ### Stock / curated images
 
-Current stock assets:
+Current stock assets and which pages use them:
 
-- `assets/images/stock/water-reflection.jpg`
-- `assets/images/stock/foggy-landscape.jpg`
-- `assets/images/stock/matthew-headshot.jpg`
-- `assets/images/stock/matthew-alt.jpg`
-- `assets/images/stock/matthew-wide.jpg`
-- `assets/images/stock/clinic-bg.jpg`
-- `assets/images/stock/multnomah.jpg`
+| File | Pages |
+|---|---|
+| `assets/images/stock/IMG_2735.jpeg` | Home (headshot section), About (hero) |
+| `assets/images/stock/water-reflection.jpg` | Home (banner), Contact (banner) |
+| `assets/images/stock/foggy-landscape.jpg` | About (banner) |
+| `assets/images/stock/clinic-bg.jpg` | Services (banner), GeneSight (banner) |
+| `assets/images/stock/multnomah.jpg` | About page |
+| `assets/images/stock/matthew-headshot.jpg` | Available; not currently used in markup |
+| `assets/images/stock/matthew-alt.jpg` | Available; not currently used in markup |
+| `assets/images/stock/matthew-wide.jpg` | Available; not currently used in markup |
+
+Other top-level image assets:
+
+| File | Pages |
+|---|---|
+| `assets/images/logo.svg` | Header and footer on every page (via `shell.js`) |
+| `assets/images/genesight-logo.png` | Services, GeneSight |
+| `assets/images/genesight-logo.svg` | Available; not currently used in markup |
+| `assets/images/benefit-corp-badge.png` | About (affiliations section) |
 
 These are optimized site assets derived from the larger raw source media stored at the repository root.
+
+### URL path convention
+
+`vite.config.js` sets `publicDir: 'assets'`, so everything under `assets/` is served from the site root at build time. In-page URLs must therefore be written as:
+
+```
+%BASE_URL%images/...
+```
+
+and **not** as `%BASE_URL%assets/images/...`. The `assets/` segment must be omitted.
 
 ## Build and deploy
 
@@ -151,9 +176,19 @@ Deployment is handled by `.github/workflows/deploy.yml`.
 
 ## HIPAA and contact form note
 
-The contact form is **static only**. It currently provides front-end-only feedback and does not submit data to a backend. Do **not** use it to collect or transmit PHI until a compliant workflow is designed and implemented.
+The `/contact/` page embeds a live **IntakeQ** iframe (`https://intakeq.com/new/dtglwx`), which is the HIPAA-compliant patient intake platform used by the practice. Patient data entered in the form is handled entirely by IntakeQ and is never processed or stored by this static site. A new-tab fallback link is shown when the iframe fails to load:
+
+```html
+<a href="https://intakeq.com/new/dtglwx" target="_blank" rel="noopener noreferrer">
+  open the IntakeQ intake in a new tab
+</a>
+```
 
 ## Repository notes
 
 - `.gitignore` excludes `node_modules/`, `dist/`, and `.DS_Store`
 - Raw source media in the repository root are source artifacts and not part of the built site
+
+## Outstanding / not yet done
+
+The repository root contains roughly 120 MB of raw source media: UUID-named `.jpeg` files (16–19 MB each) and several `AdobeStock_*.mov` video files. These files are **not referenced by the build** and do not land in `dist/`. They are candidates for removal or migration to Git LFS in a future pass. They have intentionally not been removed in this PR.
