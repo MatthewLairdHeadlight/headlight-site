@@ -4,11 +4,12 @@ Static multi-page marketing site for **Headlight Mental Healthcare** and **Matth
 
 ## Project Overview
 
-This repository contains a four-page brochure site:
+This repository contains a five-page brochure site:
 
 - `/` — Home
 - `/about/` — About Matthew
 - `/services/` — Services
+- `/genesight/` — GeneSight Pharmacogenomics
 - `/contact/` — Contact
 
 The experience is intentionally simple: fast static pages, shared shell components, curated photography, and lightweight JavaScript for page-level enhancements.
@@ -17,11 +18,12 @@ The experience is intentionally simple: fast static pages, shared shell componen
 
 ### Multi-page Vite setup
 
-`vite.config.js` defines four HTML entry points:
+`vite.config.js` defines five HTML entry points:
 
 - `index.html`
 - `about/index.html`
 - `services/index.html`
+- `genesight/index.html`
 - `contact/index.html`
 
 Each page loads a matching page module from `src/pages/`:
@@ -29,6 +31,7 @@ Each page loads a matching page module from `src/pages/`:
 - `src/pages/index.js`
 - `src/pages/about.js`
 - `src/pages/services.js`
+- `src/pages/genesight.js`
 - `src/pages/contact.js`
 
 ### Shared components
@@ -98,19 +101,37 @@ The About page slideshow uses:
 
 - `assets/images/personal/p01.jpg` … `assets/images/personal/p24.jpg`
 
+### Top-level images
+
+- `assets/images/logo.svg` — site logo (header and footer, all pages)
+- `assets/images/benefit-corp-badge.png` — Benefit Corporation badge (About page)
+- `assets/images/genesight-logo.svg` — GeneSight logo (Services, GeneSight pages)
+- `assets/images/genesight-logo.png` — GeneSight logo fallback (Services, GeneSight pages)
+
 ### Stock / curated images
 
-Current stock assets:
-
-- `assets/images/stock/water-reflection.jpg`
-- `assets/images/stock/foggy-landscape.jpg`
-- `assets/images/stock/matthew-headshot.jpg`
-- `assets/images/stock/matthew-alt.jpg`
-- `assets/images/stock/matthew-wide.jpg`
-- `assets/images/stock/clinic-bg.jpg`
-- `assets/images/stock/multnomah.jpg`
+| File | Used on |
+|---|---|
+| `assets/images/stock/IMG_2735.jpeg` | Hero/headshot — Home and About |
+| `assets/images/stock/water-reflection.jpg` | Banner — Home and Contact |
+| `assets/images/stock/foggy-landscape.jpg` | Banner — About |
+| `assets/images/stock/clinic-bg.jpg` | Banner — Services and GeneSight |
+| `assets/images/stock/matthew-headshot.jpg` | Supplemental headshot asset |
+| `assets/images/stock/matthew-alt.jpg` | Supplemental headshot asset |
+| `assets/images/stock/matthew-wide.jpg` | Supplemental headshot asset |
+| `assets/images/stock/multnomah.jpg` | Supplemental landscape asset |
 
 These are optimized site assets derived from the larger raw source media stored at the repository root.
+
+### Asset URL convention
+
+`publicDir` in `vite.config.js` is set to `assets`, so everything under `assets/` is served from the site root. All in-page image URLs **must** be written as:
+
+```
+%BASE_URL%images/...
+```
+
+**Not** `%BASE_URL%assets/images/...` — the extra `assets/` segment will cause a 404 in production.
 
 ## Build and deploy
 
@@ -151,9 +172,13 @@ Deployment is handled by `.github/workflows/deploy.yml`.
 
 ## HIPAA and contact form note
 
-The contact form is **static only**. It currently provides front-end-only feedback and does not submit data to a backend. Do **not** use it to collect or transmit PHI until a compliant workflow is designed and implemented.
+The contact page embeds a live **IntakeQ** iframe (`https://intakeq.com/new/dtglwx`), which is the HIPAA-compliant intake platform used by Headlight Mental Healthcare. A new-tab fallback link (`<a href="...">` pointing at the same URL) is provided below the iframe for users in restrictive browser environments. No PHI is collected or stored in this repository.
 
 ## Repository notes
 
 - `.gitignore` excludes `node_modules/`, `dist/`, and `.DS_Store`
 - Raw source media in the repository root are source artifacts and not part of the built site
+
+## Outstanding / not yet done
+
+The repository root contains approximately 120 MB of raw source media: UUID-named `.jpeg` files and `AdobeStock_*.mov` video files. These are **not referenced by the build** and do not appear in `dist/`. They are candidates for removal or migration to Git LFS in a future pass. Do not delete them in this PR.
