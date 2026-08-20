@@ -1,3 +1,10 @@
 node_modules/
 dist/
 .DS_Store
+
+# Raw source media should never live at the repository root; only optimized
+# derivatives under assets/ are shipped by Vite's publicDir.
+/*.jpg
+/*.jpeg
+/*.mov
+/.DS_Store

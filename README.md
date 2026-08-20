@@ -112,6 +112,14 @@ Current stock assets:
 
 These are optimized site assets derived from the larger raw source media stored at the repository root.
 
+## Asset workflow
+
+For the authoritative asset provenance map, see [`docs/ASSETS.md`](docs/ASSETS.md).
+
+- keep only optimized, shipped derivatives under `assets/`
+- keep raw camera / stock originals outside the repository root (or recover them from git history when needed)
+- do not add new root-level `.jpg`, `.jpeg`, or `.mov` source media
+
 ## Build and deploy
 
 ### Local development
