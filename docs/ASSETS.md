@@ -95,3 +95,9 @@ The root-level `.mov` files were raw background-footage source files:
 - `AdobeStock_water.columns.1889888798.mov`
 
 They were never wired into the built site, never copied into `dist/`, and are recoverable from the same `main` SHA (`ed3a49526df6ad04f14e692ca8f1cafe5b52f6b5`) if they are ever needed again.
+
+## Benefit Corporation for Good badge
+
+| Asset | Details |
+| --- | --- |
+| `assets/images/benefit-corp-badge.png` | Owner-supplied; uploaded to the repository root in commit `c325518` (renamed from `47039493-E94A-454E-86C3-2914FA20C452_1_201_a.jpeg`). Replaced the agent-fabricated badge created in commit `b311353`. Re-encoded from JPEG to true PNG with all EXIF/IPTC/XMP metadata stripped. Final dimensions: 519×392 px, 158 KB. |
