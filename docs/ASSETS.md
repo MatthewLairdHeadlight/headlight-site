@@ -63,7 +63,7 @@ These mappings come from the asset map recorded in PR #4's README plus the origi
 
 ## Stock and professional derivatives
 
-These mappings come from the historical asset map recorded in PR #4, later git history (`bb4a437829a344e1ea137e33b4413b5e480e53bb`, `70f9e265fb92be4b274ba8b127705dc811dec4f8`), and same-image hash matches against the current root-level originals.
+These mappings come from the historical asset map recorded in PR #4, later git history (`bb4a437829a344e1ea137e33b4413b5e480e53bb`, `70f9e265fb92be4b274ba8b127705dc811dec4f8`), and same-image hash matches against the root-level originals in `ed3a49526df6ad04f14e692ca8f1cafe5b52f6b5`.
 
 | Shipped asset | Root-level source filename |
 | --- | --- |
