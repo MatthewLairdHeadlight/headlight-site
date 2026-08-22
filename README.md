@@ -105,8 +105,7 @@ The About page slideshow uses:
 
 - `assets/images/logo.svg` — site logo (header and footer, all pages)
 - `assets/images/benefit-corp-badge.png` — Benefit Corporation badge (About page)
-- `assets/images/genesight-logo.svg` — GeneSight logo (Services, GeneSight pages)
-- `assets/images/genesight-logo.png` — GeneSight logo fallback (Services, GeneSight pages)
+- `assets/images/genesight-logo.png` — GeneSight logo (Services, GeneSight pages)
 
 ### Stock / curated images
 
@@ -157,9 +156,29 @@ Deployment is handled by `.github/workflows/deploy.yml`.
 
 - Runs on pushes to `main`
 - Installs dependencies with `npm ci`
-- Builds with `npm run build`
+- Builds with `VITE_BASE_PATH=/headlight-site/ npm run build`
 - Uploads `dist/`
 - Deploys with GitHub Pages actions
+
+## Deployment
+
+### GitHub Pages (project site at `/headlight-site/`)
+
+Use the GitHub Actions workflow or run the same build command locally:
+
+```bash
+VITE_BASE_PATH=/headlight-site/ npm run build
+```
+
+### Cloudflare Pages / other static hosts (root `/`)
+
+Use the default build command with no base-path override:
+
+```bash
+npm run build
+```
+
+`wrangler.toml` is included with `pages_build_output_dir = "dist"` for Cloudflare Pages.
 
 ## How to add a new page
 
