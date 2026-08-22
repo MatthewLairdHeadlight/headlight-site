@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Billing Partner — Expectations &amp; Accountability</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #fff;
+      --text: #101828;
+      --border: #d0d5dd;
+      --blue: #155eef;
+      --purple: #7a5af8;
+      --green: #067647;
+      --amber: #b54708;
+      --red: #b42318;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      font-size: 14px;
+      line-height: 1.35;
+    }
+    .sheet {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 18px;
+      display: grid;
+      gap: 12px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+    }
+    .hero { border-left: 6px solid var(--blue); background: #eef4ff; }
+    .sla { border-left: 6px solid var(--purple); background: #f4f3ff; }
+    .resolved { border-left: 6px solid var(--green); background: #ecfdf3; }
+    .chart { border-left: 6px solid var(--blue); }
+    .weekly { border-left: 6px solid var(--amber); background: #fff8eb; }
+    .escalate { border-left: 6px solid var(--red); background: #fef3f2; }
+    h1 { margin: 0; font-size: 28px; }
+    h2 { margin: 0 0 8px; font-size: 18px; }
+    p { margin: 0; }
+    ul { margin: 0; padding-left: 18px; }
+    li { margin: 5px 0; }
+    .grid-2 { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    @media (max-width: 900px) { .grid-2 { grid-template-columns: 1fr; } h1 { font-size: 24px; } }
+    @media print {
+      @page { size: letter; margin: 0.45in; }
+      body { background: #fff; }
+      .sheet { padding: 0; gap: 8px; }
+      .card { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <section class="card hero">
+      <h1>Billing Partner — Expectations &amp; Accountability</h1>
+      <p>One-page service expectations to improve responsiveness, follow-through, and traceable outcomes.</p>
+    </section>
+
+    <section class="grid-2">
+      <section class="card sla">
+        <h2>Response SLA</h2>
+        <ul>
+          <li>Acknowledge every request (call/text/email) within <strong>[X business hours]</strong>.</li>
+          <li>Provide resolution or a clear status update within <strong>[Y business days]</strong>.</li>
+          <li>If blocked, state exactly what is needed and from whom.</li>
+        </ul>
+      </section>
+
+      <section class="card resolved">
+        <h2>Resolution Reporting</h2>
+        <ul>
+          <li>Close each request with a written outcome.</li>
+          <li>Required closeout: <strong>what was done, what's pending, next steps</strong>.</li>
+          <li>No silent drops or unresolved “I’ll look into it.”</li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="grid-2">
+      <section class="card chart">
+        <h2>Chart-Based Work Standard</h2>
+        <ul>
+          <li>Any audit/claim review must reference the actual chart/EHR record.</li>
+          <li>Document which encounters were reviewed.</li>
+          <li>No “audit complete” without chart-level verification notes.</li>
+        </ul>
+      </section>
+
+      <section class="card weekly">
+        <h2>Weekly Summary</h2>
+        <ul>
+          <li>Send a brief weekly status report.</li>
+          <li>Include open items, denials worked, and resolutions completed.</li>
+          <li>Highlight items needing provider decision/action.</li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="card escalate">
+      <h2>Escalation Rule</h2>
+      <p>Any item unresolved past SLA is escalated/flagged for immediate review with date, reason, and owner.</p>
+    </section>
+  </main>
+</body>
+</html>

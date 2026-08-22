@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>State &amp; Payer Routing — Bill Remote Visits Where They Pay Best</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #fff;
+      --text: #111827;
+      --muted: #475467;
+      --border: #d0d5dd;
+      --blue: #155eef;
+      --green: #047857;
+      --amber: #b54708;
+      --red: #b42318;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      font-size: 14px;
+      line-height: 1.35;
+    }
+    .sheet {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 18px;
+      display: grid;
+      gap: 12px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+    }
+    h1 { margin: 0; font-size: 28px; }
+    h2 { margin: 0 0 8px; font-size: 18px; }
+    p { margin: 0; }
+    ul { margin: 0; padding-left: 18px; }
+    li { margin: 5px 0; }
+
+    .hero { border-left: 6px solid var(--blue); background: #eef4ff; }
+    .fact { border-left: 6px solid var(--blue); }
+    .opt { border-left: 6px solid var(--green); background: #ecfdf3; }
+    .caution { border-left: 6px solid var(--amber); background: #fff8eb; }
+    .question { border-left: 6px solid #7a5af8; background: #f4f3ff; }
+    .ref { border-left: 6px solid var(--red); background: #fef3f2; }
+
+    .grid-2 { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pill {
+      display: inline-block;
+      border: 1px solid #b2ddff;
+      background: #eff8ff;
+      color: #175cd3;
+      border-radius: 999px;
+      padding: 4px 8px;
+      font-size: 12px;
+      margin-right: 6px;
+    }
+
+    @media (max-width: 900px) { .grid-2 { grid-template-columns: 1fr; } h1 { font-size: 24px; } }
+    @media print {
+      @page { size: letter; margin: 0.45in; }
+      body { background: #fff; }
+      .sheet { padding: 0; gap: 8px; }
+      .card { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <section class="card hero">
+      <h1>State &amp; Payer Routing — Bill Remote Visits Where They Pay Best</h1>
+      <p>Simple routing checks can prevent avoidable underpayment on telehealth claims.</p>
+    </section>
+
+    <section class="card fact">
+      <h2>Key Fact</h2>
+      <p>Cigna and Blue Cross Blue Shield separate enrollment by <strong>state/tax ID</strong>. Oregon and Arizona are distinct entities with distinct fee schedules.</p>
+      <p style="margin-top:8px;"><strong>Known pattern:</strong> Oregon reimbursement is higher than Arizona for the same services.</p>
+    </section>
+
+    <section class="grid-2">
+      <section class="card opt">
+        <h2>Optimization Focus</h2>
+        <ul>
+          <li>Provider does both telehealth and in-person care.</li>
+          <li>Remote patients are associated with both state entities.</li>
+          <li>For telehealth, verify claims route to the higher-paying state entity <strong>when payer rules allow</strong>.</li>
+          <li>Confirm DrChrono billing profiles and enrollment are not defaulting remote-Oregon visits to Arizona tax ID.</li>
+        </ul>
+      </section>
+
+      <section class="card question">
+        <h2>Question for Biller</h2>
+        <p><strong>“For our remote/telehealth patients, are claims being routed to the correct (and highest-paying, where allowed) state entity — Oregon vs Arizona? Please confirm remote-Oregon visits bill under the Oregon tax ID/fee schedule.”</strong></p>
+      </section>
+    </section>
+
+    <section class="card caution">
+      <h2>Compliance Caution</h2>
+      <p>Claim routing must follow each payer's telehealth location rules (often based on where the patient is located).
+        Confirm compliance with biller — do not misroute claims.</p>
+    </section>
+
+    <section class="card ref">
+      <h2>Reference / Verification Box</h2>
+      <p><span class="pill">Payer context: Cigna/Sigma Payer ID 62308</span>
+      <span class="pill">Billing NPI = Rendering NPI 1619683224</span>
+      <span class="pill">AZ Tax ID 934905494</span></p>
+    </section>
+  </main>
+</body>
+</html>
