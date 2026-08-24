@@ -1,0 +1,45 @@
+# Claims Review Checklist
+
+This file is a to-do list for the owner — **do not edit site copy** to resolve items
+here. Each item either needs the owner's confirmation that the claim is accurate, or
+a link fix that only the owner can verify.
+
+---
+
+## Needs owner confirmation
+
+### `index.html` (Home page)
+
+| # | Claim | File / approx. line | Resolution needed |
+|---|---|---|---|
+| 1 | "same-week appointments" | `index.html` | Confirm this is still accurate and sustainable as practice grows |
+| 2 | "a provider who answers his own messages" | `index.html` | Confirm this is an operational commitment (not delegated to staff) |
+
+### `about/index.html` (About page)
+
+| # | Claim | File / approx. line | Resolution needed |
+|---|---|---|---|
+| 3 | "20+ Years of Experience" | `about/index.html` | Provide the starting year and confirm arithmetic |
+| 4 | PMHNP-BC credential link points at a generic program page | `about/index.html` | Repoint to `https://verify.nursecredentialing.org` and enter license number so visitors can verify |
+| 5 | NGLCC affiliation link points at homepage | `about/index.html` | Repoint to the member directory listing for Headlight Mental Healthcare |
+| 6 | Nurse Practitioners of Oregon link points at homepage | `about/index.html` | Repoint to member directory or membership verification page |
+| 7 | Arizona Nurses Association link points at homepage | `about/index.html` | Repoint to member directory or membership verification page |
+
+### `genesight/index.html` (GeneSight page)
+
+| # | Claim | File / approx. line | Resolution needed |
+|---|---|---|---|
+| 8 | "insurance often covers it" | `genesight/index.html` | Add a qualifier (e.g., "may cover", "often covers with prior authorization") to avoid reading as a coverage guarantee |
+
+---
+
+## Already resolved
+
+These items are confirmed accurate and link directly to verifiable sources — no
+action needed:
+
+| Item | Evidence |
+|---|---|
+| IBCCES Certified Autism Specialist (CAS) | Direct badge link: `https://apps.ibcces.org/badges/v/fa40a7` |
+| Equality Chamber of Commerce membership | Direct member listing linked from affiliation card |
+| Psychology Today profile | Direct verified profile linked from affiliation card |

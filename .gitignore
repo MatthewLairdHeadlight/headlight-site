@@ -1,3 +1,8 @@
 node_modules/
 dist/
 .DS_Store
+
+# Raw source media belongs outside the repo; only optimized derivatives under assets/ ship.
+/*.jpg
+/*.jpeg
+/*.mov

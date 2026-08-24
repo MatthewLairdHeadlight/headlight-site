@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig(() => ({
-  base: process.env.VITE_BASE_PATH || '/',
+  base: process.env.BASE_PATH ?? '/',
   root: '.',
   publicDir: 'assets',
   build: {
