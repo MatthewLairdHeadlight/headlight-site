@@ -752,3 +752,117 @@ main { flex: 1; }
     gap: var(--space-5);
   }
 }
+
+/* ─── Services page components ──────────────────────────────────────────── */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+/* Info panel — neutral surface (e.g. Telehealth access) */
+.info-panel {
+  margin-top: var(--space-10);
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+.info-panel__heading {
+  font-size: var(--text-lg);
+  color: var(--color-blue-800);
+  margin-bottom: var(--space-2);
+}
+.info-panel__body {
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+/* Info panel — accent surface (e.g. Conditions Treated) */
+.info-panel--accent {
+  margin-top: var(--space-12);
+  padding: var(--space-8);
+  background: var(--color-blue-50);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-blue-100);
+}
+.info-panel--accent .info-panel__heading {
+  font-size: var(--text-xl);
+  color: var(--color-blue-800);
+  margin-bottom: var(--space-3);
+}
+.info-panel__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* CareCredit panel */
+.carecredit-panel {
+  max-width: 680px;
+  margin-inline: auto;
+  text-align: center;
+  padding: var(--space-8);
+  background: var(--color-blue-50);
+  border: 1px solid var(--color-blue-100);
+  border-radius: var(--radius-lg);
+}
+.carecredit-panel__heading {
+  font-size: var(--text-2xl);
+  color: var(--color-blue-800);
+  margin-bottom: var(--space-3);
+}
+.carecredit-panel__lead {
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-4);
+}
+.carecredit-panel__actions {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.carecredit-panel__secondary-link {
+  font-size: var(--text-sm);
+  color: var(--color-blue-600);
+  font-weight: var(--weight-medium);
+  align-self: center;
+}
+
+/* Mid-page CTA (exploratory, subordinate to bottom CTA) */
+.mid-page-cta {
+  margin-top: var(--space-10);
+  padding: var(--space-6) var(--space-8);
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+.mid-page-cta__text {
+  flex: 1;
+  min-width: 200px;
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+/* CTA primary group — wraps primary button + microcopy as a column */
+.cta-primary-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* CTA microcopy — reassurance line beneath a primary action button */
+.cta-microcopy {
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,.6);
+  line-height: var(--leading-relaxed);
+}

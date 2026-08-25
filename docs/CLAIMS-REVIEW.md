@@ -25,6 +25,12 @@ a link fix that only the owner can verify.
 | 6 | Nurse Practitioners of Oregon link points at homepage | `about/index.html` | Repoint to member directory or membership verification page |
 | 7 | Arizona Nurses Association link points at homepage | `about/index.html` | Repoint to member directory or membership verification page |
 
+### `services/index.html` (Services page)
+
+| # | Claim | File / approx. line | Resolution needed |
+|---|---|---|---|
+| 9 | CTA microcopy: "No payment required to begin." | `services/index.html` bottom CTA | Confirm that IntakeQ form at `https://intakeq.com/new/dtglwx` collects no payment information at the start of intake; replace with more specific wording (e.g. "Takes about X minutes. No payment required to start.") once verified |
+
 ### `genesight/index.html` (GeneSight page)
 
 | # | Claim | File / approx. line | Resolution needed |
