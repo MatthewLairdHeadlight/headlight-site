@@ -778,6 +778,10 @@ main { flex: 1; }
   line-height: var(--leading-relaxed);
   margin: 0;
 }
+.insurance-payment__body {
+  display: grid;
+  gap: var(--space-4);
+}
 
 /* Info panel — accent surface (e.g. Conditions Treated) */
 .info-panel--accent {
