@@ -873,3 +873,65 @@ main { flex: 1; }
   color: rgba(255,255,255,.6);
   line-height: var(--leading-relaxed);
 }
+
+/* ─── Trust bar ─────────────────────────────────────────────────────────── */
+.trust-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-8);
+  text-align: center;
+}
+.trust-bar__stat {
+  font-size: var(--text-3xl);
+  font-family: var(--font-ui);
+  font-weight: 700;
+  color: var(--color-blue-600);
+}
+.trust-bar__label {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+}
+
+/* ─── Hero actions row ───────────────────────────────────────────────────── */
+.hero-actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-top: var(--space-8);
+}
+
+/* ─── Photo frame ────────────────────────────────────────────────────────── */
+.photo-frame {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+.photo-frame__img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* ─── Centered container modifier ───────────────────────────────────────── */
+.container--center { text-align: center; }
+
+/* ─── Centered section lead ─────────────────────────────────────────────── */
+.section__lead--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* ─── CTA actions row ────────────────────────────────────────────────────── */
+.cta-actions {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--space-8);
+}
+
+/* ─── Section footer — single action below a content block ──────────────── */
+.section__footer { margin-top: var(--space-10); }

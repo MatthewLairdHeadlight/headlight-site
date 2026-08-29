@@ -52,3 +52,89 @@
     min-height: 960px;
   }
 }
+
+/* ─── Contact info list & items ──────────────────────────────────────────── */
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+.contact-info-item {
+  display: flex;
+  gap: var(--space-4);
+}
+.contact-info-item--center { align-items: center; }
+.contact-info-item__icon {
+  width: 48px;
+  height: 48px;
+  background: var(--color-blue-50);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-blue-600);
+}
+.contact-info-item__title {
+  font-weight: var(--weight-semibold);
+  color: var(--color-blue-800);
+}
+.contact-info-item__body {
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+}
+.contact-info-item__sub {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+.contact-link {
+  color: var(--color-blue-600);
+  text-decoration: none;
+}
+
+/* ─── Contact notice boxes ───────────────────────────────────────────────── */
+.contact-notice {
+  margin-top: var(--space-8);
+  padding: var(--space-5);
+  background: var(--color-blue-50);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-blue-100);
+}
+.contact-notice + .contact-notice { margin-top: var(--space-6); }
+.contact-notice--light { background: white; }
+.contact-notice__text {
+  font-size: var(--text-sm);
+  color: var(--color-blue-700);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+.contact-notice__heading {
+  font-size: var(--text-sm);
+  color: var(--color-blue-800);
+  font-weight: var(--weight-medium);
+  margin-bottom: var(--space-2);
+}
+.contact-notice__body {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+.contact-notice__body + .contact-notice__body { margin-top: var(--space-3); }
+.contact-notice__link { color: var(--color-blue-600); }
+.contact-notice__link--emphasis { font-weight: 600; }
+
+/* ─── Contact form heading ───────────────────────────────────────────────── */
+.contact-form__heading {
+  font-size: var(--text-xl);
+  color: var(--color-blue-800);
+  margin-bottom: var(--space-4);
+}
+
+/* ─── Contact info lead paragraph ────────────────────────────────────────── */
+.contact-info__lead {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-8);
+}
