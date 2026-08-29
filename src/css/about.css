@@ -92,3 +92,17 @@
     min-height: 360px;
   }
 }
+
+/* ─── Affiliation card badge image ───────────────────────────────────────── */
+.affiliation-card__badge {
+  display: block;
+  max-width: 180px;
+  height: auto;
+  margin-bottom: var(--space-3);
+}
+.affiliation-card__badge--wide {
+  max-width: 220px;
+}
+
+/* ─── Psychology Today profile callout margin ────────────────────────────── */
+.pt-profile-callout { margin-top: var(--space-10); }
