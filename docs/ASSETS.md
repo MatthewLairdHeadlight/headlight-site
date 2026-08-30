@@ -8,7 +8,7 @@ via `git show d13d704:<filename>`.
 
 ---
 
-## Personal photos (`assets/images/personal/p02.jpg`, `p03.jpg`, `p04.jpg`, `p05.jpg`, `p07.jpg`, `p08.jpg`, `p09.jpg`, `p10.jpg`, `p11.jpg`, `p12.jpg`, `p13.jpg`, `p15.jpg`, `p16.jpg`, `p17.jpg`, `p19.jpg`, `p20.jpg`, `p21.jpg`, `p22.jpg`, `p23.jpg`)
+## Personal photos (`assets/images/personal/p02.jpg`, `p04.jpg`, `p05.jpg`, `p07.jpg`, `p08.jpg`, `p09.jpg`, `p10.jpg`, `p11.jpg`, `p12.jpg`, `p13.jpg`, `p15.jpg`, `p16.jpg`, `p17.jpg`, `p19.jpg`, `p20.jpg`, `p21.jpg`, `p22.jpg`, `p23.jpg`)
 
 These are optimized derivatives (≤1200 px longest edge, JPEG quality ~82, subtle
 cool grade) of owner-supplied Apple Photos exports. The exact mapping from UUID

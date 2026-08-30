@@ -81,7 +81,7 @@ The About page includes a slideshow section built from:
 
 ### How it works
 
-- The About page renders 19 slides using: `assets/images/personal/p02.jpg`, `p03.jpg`, `p04.jpg`, `p05.jpg`, `p07.jpg`, `p08.jpg`, `p09.jpg`, `p10.jpg`, `p11.jpg`, `p12.jpg`, `p13.jpg`, `p15.jpg`, `p16.jpg`, `p17.jpg`, `p19.jpg`, `p20.jpg`, `p21.jpg`, `p22.jpg`, and `p23.jpg`
+- The About page renders 18 slides using: `assets/images/personal/p02.jpg`, `p04.jpg`, `p05.jpg`, `p07.jpg`, `p08.jpg`, `p09.jpg`, `p10.jpg`, `p11.jpg`, `p12.jpg`, `p13.jpg`, `p15.jpg`, `p16.jpg`, `p17.jpg`, `p19.jpg`, `p20.jpg`, `p21.jpg`, `p22.jpg`, and `p23.jpg`
 - `initKenBurns()` cycles `.kb-slide` elements
 - CSS handles pan/zoom/fade animation variants
 - Reduced-motion users get a gentler fade-only version
@@ -99,7 +99,7 @@ The About page includes a slideshow section built from:
 
 The About page slideshow uses:
 
-- `assets/images/personal/p02.jpg`, `p03.jpg`, `p04.jpg`, `p05.jpg`, `p07.jpg`, `p08.jpg`, `p09.jpg`, `p10.jpg`, `p11.jpg`, `p12.jpg`, `p13.jpg`, `p15.jpg`, `p16.jpg`, `p17.jpg`, `p19.jpg`, `p20.jpg`, `p21.jpg`, `p22.jpg`, `p23.jpg`
+- `assets/images/personal/p02.jpg`, `p04.jpg`, `p05.jpg`, `p07.jpg`, `p08.jpg`, `p09.jpg`, `p10.jpg`, `p11.jpg`, `p12.jpg`, `p13.jpg`, `p15.jpg`, `p16.jpg`, `p17.jpg`, `p19.jpg`, `p20.jpg`, `p21.jpg`, `p22.jpg`, `p23.jpg`
 
 ### Top-level images
 
