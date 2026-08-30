@@ -260,6 +260,7 @@ main { flex: 1; }
   background: var(--color-blue-800);
   color: var(--color-white);
 }
+#insurance-payment { scroll-margin-top: calc(64px + var(--space-4)); }
 .section__eyebrow {
   font-family: var(--font-ui);
   font-size: var(--text-sm);
