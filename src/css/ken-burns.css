@@ -91,25 +91,30 @@
 .kb-anim-6 .kb-slide__img { animation: kb-drift-r    var(--kb-duration, 8s) ease-in-out forwards; }
 .kb-anim-7 .kb-slide__img { animation: kb-drift-up   var(--kb-duration, 8s) ease-in-out forwards; }
 
-.kb-slide[data-slide="0"] .kb-slide__img { object-position: 50% 42%; }
-.kb-slide[data-slide="1"] .kb-slide__img { object-position: 50% 42%; }
-.kb-slide[data-slide="2"] .kb-slide__img { object-position: 50% 42%; }
-.kb-slide[data-slide="3"] .kb-slide__img { object-position: 50% 42%; }
-.kb-slide[data-slide="4"] .kb-slide__img { object-position: 50% 42%; }
+.kb-slide[data-slide="0"] .kb-slide__img { object-position: 53% 54%; }
+.kb-slide[data-slide="1"] .kb-slide__img { object-position: 35% 77%; }
+.kb-slide[data-slide="2"] .kb-slide__img { object-position: 41% 23%; }
+.kb-slide[data-slide="3"] .kb-slide__img { object-position: 53% 59%; }
+.kb-slide[data-slide="4"] .kb-slide__img { object-position: 33% 60%; }
 .kb-slide[data-slide="5"] .kb-slide__img { object-position: 50% 42%; }
-.kb-slide[data-slide="6"] .kb-slide__img { object-position: 50% 42%; }
+.kb-slide[data-slide="6"] .kb-slide__img { object-position: 40% 30%; }
 .kb-slide[data-slide="7"] .kb-slide__img { object-position: 50% 42%; }
-.kb-slide[data-slide="8"] .kb-slide__img { object-position: 42% 21%; }
-.kb-slide[data-slide="9"] .kb-slide__img { object-position: 50% 42%; }
-.kb-slide[data-slide="10"] .kb-slide__img { object-position: 50% 42%; }
-.kb-slide[data-slide="11"] .kb-slide__img { object-position: 50% 42%; }
-.kb-slide[data-slide="12"] .kb-slide__img { object-position: 50% 42%; }
-.kb-slide[data-slide="13"] .kb-slide__img { object-position: 52% 78%; }
+.kb-slide[data-slide="8"] .kb-slide__img { object-position: 50% 42%; }
+.kb-slide[data-slide="9"] .kb-slide__img { object-position: 57% 48%; }
+.kb-slide[data-slide="10"] .kb-slide__img { object-position: 42% 21%; }
+.kb-slide[data-slide="11"] .kb-slide__img { object-position: 36% 62%; }
+.kb-slide[data-slide="12"] .kb-slide__img { object-position: 80% 73%; }
+.kb-slide[data-slide="13"] .kb-slide__img { object-position: 80% 57%; }
 .kb-slide[data-slide="14"] .kb-slide__img { object-position: 50% 42%; }
-.kb-slide[data-slide="15"] .kb-slide__img { object-position: 67% 74%; }
-.kb-slide[data-slide="16"] .kb-slide__img { object-position: 50% 42%; }
-.kb-slide[data-slide="17"] .kb-slide__img { object-position: 50% 42%; }
-.kb-slide[data-slide="18"] .kb-slide__img { object-position: 50% 42%; }
+.kb-slide[data-slide="15"] .kb-slide__img { object-position: 70% 37%; }
+.kb-slide[data-slide="16"] .kb-slide__img { object-position: 52% 78%; }
+.kb-slide[data-slide="17"] .kb-slide__img { object-position: 80% 53%; }
+.kb-slide[data-slide="18"] .kb-slide__img { object-position: 66% 20%; }
+.kb-slide[data-slide="19"] .kb-slide__img { object-position: 67% 74%; }
+.kb-slide[data-slide="20"] .kb-slide__img { object-position: 50% 42%; }
+.kb-slide[data-slide="21"] .kb-slide__img { object-position: 51% 33%; }
+.kb-slide[data-slide="22"] .kb-slide__img { object-position: 44% 32%; }
+.kb-slide[data-slide="23"] .kb-slide__img { object-position: 50% 42%; }
 
 /* Vignette layer (always on top of photos, below quote) */
 .ken-burns::before {

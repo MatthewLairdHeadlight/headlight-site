@@ -8,16 +8,13 @@ via `git show d13d704:<filename>`.
 
 ---
 
-## Personal photos (`assets/images/personal/`)
+## Personal photos (`assets/images/personal/p01–p24.jpg`)
 
 These are optimized derivatives (≤1200 px longest edge, JPEG quality ~82, subtle
-cool grade) of owner-supplied Apple Photos exports. The currently published set is
-`p02.jpg`, `p03.jpg`, `p04.jpg`, `p05.jpg`, `p07.jpg`, `p08.jpg`, `p09.jpg`,
-`p10.jpg`, `p11.jpg`, `p12.jpg`, `p13.jpg`, `p15.jpg`, `p16.jpg`, `p17.jpg`,
-`p19.jpg`, `p20.jpg`, `p21.jpg`, `p22.jpg`, and `p23.jpg`. The exact mapping
-from UUID source filenames to optimized sequence numbers was not recorded at
-ingestion time; the complete set of UUID source files is recoverable from commit
-`d13d704` (see above).
+cool grade) of owner-supplied Apple Photos exports. The exact mapping from UUID
+source filenames to optimized sequence numbers was not recorded at ingestion time;
+the complete set of UUID source files is recoverable from commit `d13d704` (see
+above).
 
 **Optimization recipe used:**
 - Resize: longest edge ≤ 1200 px (Lanczos resampling)
