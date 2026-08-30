@@ -69,7 +69,7 @@ The site already has a real photo library. Rank them — which images carry the 
 Available in the repo:
 - Provider photos: `stock/IMG_2735.jpeg`, `stock/matthew-headshot.jpg`, `stock/matthew-alt.jpg`, `stock/matthew-wide.jpg`
 - Landscapes/mood: `stock/water-reflection.jpg`, `stock/foggy-landscape.jpg`, `stock/clinic-bg.jpg`, `stock/multnomah.jpg`
-- Personal/Ken Burns set: `personal/p01.jpg` … `p24.jpg`
+- Personal/Ken Burns set: `personal/p02.jpg`, `p03.jpg`, `p04.jpg`, `p05.jpg`, `p07.jpg`, `p08.jpg`, `p09.jpg`, `p10.jpg`, `p11.jpg`, `p12.jpg`, `p13.jpg`, `p15.jpg`, `p16.jpg`, `p17.jpg`, `p19.jpg`, `p20.jpg`, `p21.jpg`, `p22.jpg`, `p23.jpg`
 - Badges: IBCCES CAS, NGLCC, Benefit Corp, Equality Chamber, ANA, NPO, AzNPC
 
 ## 7. Voice & Feeling (three words)
