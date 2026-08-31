@@ -6,7 +6,22 @@
   <title>Services | Headlight Mental Healthcare</title>
   <meta name="description" content="ADHD and autism spectrum evaluation, psychiatric evaluation, medication management, and collaborative psychiatric care from Matthew Laird, PMHNP-BC in Phoenix, Arizona and Portland, Oregon." />
   <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
-  <script>document.documentElement.classList.add("js")</script>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      root.classList.add('js');
+      let storedTheme = null;
+      try {
+        const value = window.localStorage.getItem('theme');
+        storedTheme = value === 'light' || value === 'dark' ? value : null;
+      } catch {
+        storedTheme = null;
+      }
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = storedTheme || (prefersDark ? 'dark' : 'light');
+      root.setAttribute('data-theme', theme);
+    })();
+  </script>
   <script type="module" src="../src/pages/services.js"></script>
 </head>
 <body>

@@ -101,7 +101,7 @@
   border: 1px solid var(--color-blue-100);
 }
 .contact-notice + .contact-notice { margin-top: var(--space-6); }
-.contact-notice--light { background: white; }
+.contact-notice--light { background: var(--color-surface); }
 .contact-notice__text {
   font-size: var(--text-sm);
   color: var(--color-blue-700);
