@@ -197,6 +197,11 @@ main { flex: 1; }
   line-height: var(--leading-relaxed);
   color: rgba(255,255,255,.45);
 }
+.site-footer__sms a {
+  display: inline;
+  padding: 0;
+  text-decoration: underline;
+}
 .site-footer__disclaimer {
   font-size: var(--text-xs);
   line-height: var(--leading-relaxed);

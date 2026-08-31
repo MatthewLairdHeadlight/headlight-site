@@ -19,6 +19,7 @@ export default defineConfig(() => ({
         contact: resolve(__dirname, 'contact/index.html'),
         faqs: resolve(__dirname, 'faqs/index.html'),
         genesight: resolve(__dirname, 'genesight/index.html'),
+        privacyPolicy: resolve(__dirname, 'privacy-policy/index.html'),
       },
     },
   },

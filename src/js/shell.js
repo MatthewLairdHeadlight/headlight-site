@@ -105,7 +105,7 @@ export const siteFooter = /* html */`
       <div class="site-footer__meta">
         <span>© ${new Date().getFullYear()} Headlight Mental Healthcare · Matthew Laird, PMHNP-BC</span>
         <p class="site-footer__sms">
-          SMS notifications are used for appointments and care. Message frequency may vary, and standard message/data rates may apply. Reply STOP to opt out or HELP for assistance. Details are available in the Privacy Policy.
+          SMS notifications are used for appointments and care. Message frequency may vary, and standard message/data rates may apply. Reply STOP to opt out or HELP for assistance. Details are available in the <a href="${baseUrl}privacy-policy/">Privacy Policy</a>.
         </p>
       </div>
       <p class="site-footer__disclaimer">
