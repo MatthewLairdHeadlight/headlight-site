@@ -26,6 +26,7 @@ export const siteHeader = /* html */`
         <a href="${baseUrl}">Home</a>
         <a href="${baseUrl}about/">About</a>
         <a href="${baseUrl}services/">Services</a>
+        <a href="${baseUrl}faqs/">FAQs</a>
         <a href="${baseUrl}genesight/">GeneSight</a>
         <a href="${baseUrl}contact/" class="site-nav__cta">Start Intake</a>
       </nav>
@@ -68,9 +69,9 @@ export const siteFooter = /* html */`
         <a href="${baseUrl}">Home</a>
         <a href="${baseUrl}about/">About Matthew</a>
         <a href="${baseUrl}services/">Services</a>
+        <a href="${baseUrl}faqs/">FAQs</a>
         <a href="${baseUrl}genesight/">GeneSight</a>
         <a href="${baseUrl}contact/">Contact</a>
-        <a href="https://headlightmentalhealthcare.com/faqs/" target="_blank" rel="noopener noreferrer">FAQs</a>
         <a href="https://headlightmentalhealthcare.com/communication-policy/" target="_blank" rel="noopener noreferrer">Communication Policy</a>
       </div>
       <div>
@@ -101,7 +102,12 @@ export const siteFooter = /* html */`
       </div>
     </div>
     <div class="site-footer__bottom">
-      <span>© ${new Date().getFullYear()} Headlight Mental Healthcare · Matthew Laird, PMHNP-BC</span>
+      <div class="site-footer__meta">
+        <span>© ${new Date().getFullYear()} Headlight Mental Healthcare · Matthew Laird, PMHNP-BC</span>
+        <p class="site-footer__sms">
+          SMS notifications are used for appointments and care. Message frequency may vary, and standard message/data rates may apply. Reply STOP to opt out or HELP for assistance. Details are available in the Privacy Policy.
+        </p>
+      </div>
       <p class="site-footer__disclaimer">
         This site is for informational purposes only and does not constitute medical advice.
         If you are experiencing a mental health emergency, call 988 (Suicide &amp; Crisis Lifeline)
