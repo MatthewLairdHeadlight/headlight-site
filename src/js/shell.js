@@ -168,7 +168,10 @@ function initThemeToggle() {
   if (!toggle) return;
 
   const root = document.documentElement;
-  const currentTheme = root.getAttribute('data-theme') === 'dark' ? 'dark' : getPreferredTheme();
+  const initialTheme = root.getAttribute('data-theme');
+  const currentTheme = initialTheme === 'light' || initialTheme === 'dark'
+    ? initialTheme
+    : getPreferredTheme();
   applyTheme(currentTheme);
   updateThemeToggleState(toggle, currentTheme);
 
@@ -193,8 +196,6 @@ function initThemeToggle() {
 
   if (typeof mediaQuery.addEventListener === 'function') {
     mediaQuery.addEventListener('change', syncSystemPreference);
-  } else if (typeof mediaQuery.addListener === 'function') {
-    mediaQuery.addListener(syncSystemPreference);
   }
 
   window.requestAnimationFrame(() => root.classList.add('theme-ready'));

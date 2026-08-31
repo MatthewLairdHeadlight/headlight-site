@@ -195,6 +195,7 @@ main { flex: 1; }
   outline-offset: 2px;
 }
 .site-theme-toggle__icon--moon { display: none; }
+html[data-theme="light"] .site-theme-toggle__icon--sun { display: block; }
 html[data-theme="dark"] .site-theme-toggle__icon--sun { display: none; }
 html[data-theme="dark"] .site-theme-toggle__icon--moon { display: block; }
 
