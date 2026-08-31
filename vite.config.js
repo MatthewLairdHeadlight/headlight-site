@@ -18,6 +18,7 @@ export default defineConfig(() => ({
         services: resolve(__dirname, 'services/index.html'),
         contact: resolve(__dirname, 'contact/index.html'),
         genesight: resolve(__dirname, 'genesight/index.html'),
+        faqs: resolve(__dirname, 'faqs/index.html'),
       },
     },
   },
