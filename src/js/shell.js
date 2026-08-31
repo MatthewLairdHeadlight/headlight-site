@@ -4,6 +4,7 @@
  */
 
 const baseUrl = import.meta.env.BASE_URL;
+const THEME_STORAGE_KEY = 'theme';
 
 /* ── Inline SVG helpers ─────────────────────────────────────────────────── */
 const phoneIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`;
@@ -28,6 +29,16 @@ export const siteHeader = /* html */`
         <a href="${baseUrl}services/">Services</a>
         <a href="${baseUrl}faqs/">FAQs</a>
         <a href="${baseUrl}genesight/">GeneSight</a>
+        <button
+          type="button"
+          class="site-theme-toggle"
+          data-theme-toggle
+          aria-label="Switch to dark theme"
+          aria-pressed="false"
+        >
+          <svg class="site-theme-toggle__icon site-theme-toggle__icon--sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"/></svg>
+          <svg class="site-theme-toggle__icon site-theme-toggle__icon--moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3c-.03.2-.04.4-.04.61A7.5 7.5 0 0 0 18.67 11.1c.78 0 1.53-.12 2.23-.31.07.64.1 1.3.1 2Z"/></svg>
+        </button>
         <a href="${baseUrl}contact/" class="site-nav__cta">Start Intake</a>
       </nav>
     </div>
@@ -123,7 +134,71 @@ export function mountShell() {
   const footerSlot = document.getElementById('site-footer');
   if (headerSlot) headerSlot.outerHTML = siteHeader;
   if (footerSlot) footerSlot.outerHTML = siteFooter;
+  initThemeToggle();
   initWaterBannerCanvas();
+}
+
+function getStoredTheme() {
+  try {
+    const value = window.localStorage.getItem(THEME_STORAGE_KEY);
+    return value === 'dark' || value === 'light' ? value : null;
+  } catch {
+    return null;
+  }
+}
+
+function getPreferredTheme() {
+  const stored = getStoredTheme();
+  if (stored) return stored;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+}
+
+function updateThemeToggleState(toggle, theme) {
+  const isDark = theme === 'dark';
+  toggle.setAttribute('aria-pressed', String(isDark));
+  toggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+}
+
+function initThemeToggle() {
+  const toggle = document.querySelector('[data-theme-toggle]');
+  if (!toggle) return;
+
+  const root = document.documentElement;
+  const initialTheme = root.getAttribute('data-theme');
+  const currentTheme = initialTheme === 'light' || initialTheme === 'dark'
+    ? initialTheme
+    : getPreferredTheme();
+  applyTheme(currentTheme);
+  updateThemeToggleState(toggle, currentTheme);
+
+  toggle.addEventListener('click', () => {
+    const nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(nextTheme);
+    try {
+      window.localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+    } catch {
+      // no-op (storage unavailable)
+    }
+    updateThemeToggleState(toggle, nextTheme);
+  });
+
+  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  const syncSystemPreference = (event) => {
+    if (getStoredTheme()) return;
+    const nextTheme = event.matches ? 'dark' : 'light';
+    applyTheme(nextTheme);
+    updateThemeToggleState(toggle, nextTheme);
+  };
+
+  if (typeof mediaQuery.addEventListener === 'function') {
+    mediaQuery.addEventListener('change', syncSystemPreference);
+  }
+
+  window.requestAnimationFrame(() => root.classList.add('theme-ready'));
 }
 
 function initWaterBannerCanvas() {

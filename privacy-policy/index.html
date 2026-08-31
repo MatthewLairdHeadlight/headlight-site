@@ -6,7 +6,22 @@
   <title>SMS Privacy Policy | Headlight Mental Healthcare</title>
   <meta name="description" content="Privacy information for Headlight Mental Healthcare text notifications related to appointments and care." />
   <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
-  <script>document.documentElement.classList.add("js")</script>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      root.classList.add('js');
+      let storedTheme = null;
+      try {
+        const value = window.localStorage.getItem('theme');
+        storedTheme = value === 'light' || value === 'dark' ? value : null;
+      } catch {
+        storedTheme = null;
+      }
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = storedTheme || (prefersDark ? 'dark' : 'light');
+      root.setAttribute('data-theme', theme);
+    })();
+  </script>
   <script type="module" src="../src/pages/privacy-policy.js"></script>
 </head>
 <body>

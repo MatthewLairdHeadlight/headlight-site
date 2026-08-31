@@ -7,7 +7,22 @@
   <meta name="description" content="Compassionate, evidence-based psychiatric care from Matthew Laird, PMHNP-BC. Certified Autism Specialist. LGBTQ+ affirming care. Serving Phoenix, Arizona; Portland, Oregon; and via telehealth." />
   <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <script>document.documentElement.classList.add("js")</script>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      root.classList.add('js');
+      let storedTheme = null;
+      try {
+        const value = window.localStorage.getItem('theme');
+        storedTheme = value === 'light' || value === 'dark' ? value : null;
+      } catch {
+        storedTheme = null;
+      }
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = storedTheme || (prefersDark ? 'dark' : 'light');
+      root.setAttribute('data-theme', theme);
+    })();
+  </script>
   <script type="module" src="./src/pages/index.js"></script>
 </head>
 <body>
