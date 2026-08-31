@@ -34,6 +34,10 @@
   --color-text:            var(--color-gray-900);
   --color-text-muted:      var(--color-gray-600);
   --color-text-inverse:    var(--color-white);
+  --color-heading:         var(--color-blue-800);
+  --color-text-strong:     var(--color-blue-700);
+  --color-text-accent:     var(--color-blue-600);
+  --color-text-accent-soft: var(--color-blue-500);
   --color-border:          var(--color-gray-200);
   --color-cta:             var(--color-blue-500);
   --color-cta-hover:       var(--color-blue-600);
