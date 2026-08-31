@@ -27,7 +27,7 @@
   padding: var(--space-5) var(--space-6);
   font-size: var(--text-lg);
   font-weight: var(--weight-semibold);
-  color: var(--color-blue-800);
+  color: var(--color-heading);
 }
 
 .faq-item summary::-webkit-details-marker { display: none; }
@@ -37,7 +37,7 @@
   flex: 0 0 auto;
   font-size: 1.5rem;
   line-height: 1;
-  color: var(--color-blue-500);
+  color: var(--color-text-accent-soft);
 }
 
 .faq-item[open] summary::after { content: '–'; }
@@ -66,5 +66,5 @@
 }
 
 .faq-answer strong {
-  color: var(--color-blue-800);
+  color: var(--color-heading);
 }
