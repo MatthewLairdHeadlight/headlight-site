@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mental Health Resources &amp; Articles | Headlight Mental Healthcare</title>
+  <meta name="description" content="Evidence-based articles on mental health topics including autism parenting, immigration trauma, LGBTQ+ care, veterans' mental health, and more — by Matthew Laird, PMHNP-BC." />
+  <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+  <script>
+    (() => {
+      const root = document.documentElement;
+      root.classList.add('js');
+      let storedTheme = null;
+      try {
+        const value = window.localStorage.getItem('theme');
+        storedTheme = value === 'light' || value === 'dark' ? value : null;
+      } catch {
+        storedTheme = null;
+      }
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = storedTheme || (prefersDark ? 'dark' : 'light');
+      root.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <script type="module" src="../src/pages/resources.js"></script>
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <section class="resources-banner">
+      <div class="resources-banner__scrim"></div>
+      <div class="container resources-banner__content">
+        <p class="resources-banner__tag">Article Library</p>
+        <h1 class="resources-banner__title">Mental Health Resources</h1>
+        <p class="resources-banner__lead">Evidence-based articles on psychiatric care, trauma, identity, and well-being — written by Matthew Laird, PMHNP-BC.</p>
+      </div>
+    </section>
+
+    <section class="resources-section">
+      <div class="container">
+        <div class="resources-grid" data-scroll-reveal>
+
+          <a class="resource-card" href="%BASE_URL%resources/parenting-a-child-with-autism/">
+            <div class="resource-card__thumb">
+              <img
+                src="%BASE_URL%resources/hero-parenting-autism.jpg"
+                alt="Parent reading with child — supporting a child with autism"
+                width="800"
+                height="534"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="resource-card__body">
+              <p class="resource-card__tag">Autism &amp; Parenting</p>
+              <h2 class="resource-card__title">Understanding the Unique Journey of Parenting a Child with Autism</h2>
+              <p class="resource-card__excerpt">Parenting a child with autism introduces unique emotional, behavioral, and developmental challenges. Learn how empathy, expert support, and community can empower your family.</p>
+              <span class="resource-card__cta">Read article</span>
+            </div>
+          </a>
+
+          <a class="resource-card" href="%BASE_URL%resources/psychological-impact-of-deportation/">
+            <div class="resource-card__thumb">
+              <img
+                src="%BASE_URL%resources/hero-deportation.jpg"
+                alt="Family silhouette — the emotional toll of deportation and separation"
+                width="800"
+                height="533"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="resource-card__body">
+              <p class="resource-card__tag">Immigration &amp; Trauma</p>
+              <h2 class="resource-card__title">Coping with the Psychological Impact of Deportation</h2>
+              <p class="resource-card__excerpt">Deportation tears families apart and leaves deep psychological wounds. Discover how trauma-informed mental health care helps those affected by immigration enforcement find clarity and resilience.</p>
+              <span class="resource-card__cta">Read article</span>
+            </div>
+          </a>
+
+          <a class="resource-card" href="%BASE_URL%resources/lgbtq-trauma-and-ptsd/">
+            <div class="resource-card__thumb">
+              <img
+                src="%BASE_URL%resources/hero-lgbtq-trauma.jpg"
+                alt="LGBTQ+ pride flag representing community and resilience"
+                width="800"
+                height="1202"
+                style="object-position: center 30%;"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="resource-card__body">
+              <p class="resource-card__tag">LGBTQ+ Mental Health</p>
+              <h2 class="resource-card__title">Navigating Trauma and PTSD in the LGBTQ+ Community</h2>
+              <p class="resource-card__excerpt">LGBTQ+ individuals face unique stressors — discrimination, rejection, and violence — that can lead to PTSD. Explore evidence-based paths to healing in an affirming space.</p>
+              <span class="resource-card__cta">Read article</span>
+            </div>
+          </a>
+
+          <a class="resource-card" href="%BASE_URL%resources/veterans-mental-health/">
+            <div class="resource-card__thumb">
+              <img
+                src="%BASE_URL%resources/hero-veterans.jpg"
+                alt="Veteran silhouette at sunset — honoring service and supporting mental health"
+                width="800"
+                height="533"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="resource-card__body">
+              <p class="resource-card__tag">Veterans</p>
+              <h2 class="resource-card__title">Psychological Challenges Faced by Veterans</h2>
+              <p class="resource-card__excerpt">From PTSD and moral injury to the challenges of transitioning to civilian life — understanding what veterans face is the first step toward meaningful support.</p>
+              <span class="resource-card__cta">Read article</span>
+            </div>
+          </a>
+
+          <a class="resource-card" href="%BASE_URL%resources/loneliness-and-isolation-portland/">
+            <div class="resource-card__thumb">
+              <img
+                src="%BASE_URL%resources/hero-loneliness-portland.jpg"
+                alt="Empty park bench in Portland — loneliness as a public health crisis"
+                width="800"
+                height="533"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="resource-card__body">
+              <p class="resource-card__tag">Community &amp; Connection</p>
+              <h2 class="resource-card__title">Loneliness and Social Isolation in Portland, Oregon: A Growing Public Health Crisis</h2>
+              <p class="resource-card__excerpt">Nearly 45% of Oregonians report chronic loneliness. This is not a character flaw — it's a public health crisis. And it's treatable.</p>
+              <span class="resource-card__cta">Read article</span>
+            </div>
+          </a>
+
+          <a class="resource-card" href="%BASE_URL%resources/mental-health-equity/">
+            <div class="resource-card__thumb">
+              <img
+                src="%BASE_URL%resources/hero-mental-health-equity.jpg"
+                alt="Diverse community gathering — advocating for mental health equity"
+                width="800"
+                height="1203"
+                style="object-position: center 20%;"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="resource-card__body">
+              <p class="resource-card__tag">Access &amp; Equity</p>
+              <h2 class="resource-card__title">Overcoming Barriers to Mental Health Equity in the U.S.</h2>
+              <p class="resource-card__excerpt">Getting mental health care shouldn't depend on your zip code, your paycheck, or who you love. Too often in the U.S., it still does. Learn what needs to change.</p>
+              <span class="resource-card__cta">Read article</span>
+            </div>
+          </a>
+
+          <a class="resource-card" href="%BASE_URL%resources/holistic-mental-health-care-trends/">
+            <div class="resource-card__thumb">
+              <img
+                src="%BASE_URL%resources/hero-holistic-trends.jpg"
+                alt="Person meditating outdoors — integrative and holistic mental health care"
+                width="800"
+                height="1120"
+                style="object-position: center 15%;"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="resource-card__body">
+              <p class="resource-card__tag">Integrative Care</p>
+              <h2 class="resource-card__title">Emerging Trends in Mental Health and Holistic Care Approaches</h2>
+              <p class="resource-card__excerpt">From the gut-brain connection to sleep health and teletherapy, mental health treatment is evolving. Discover the holistic approaches shaping care in Oregon and Arizona.</p>
+              <span class="resource-card__cta">Read article</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+</body>
+</html>
