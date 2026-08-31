@@ -804,42 +804,6 @@ main { flex: 1; }
   gap: var(--space-2);
 }
 
-/* CareCredit panel */
-.carecredit-panel {
-  max-width: 680px;
-  margin-inline: auto;
-  text-align: center;
-  padding: var(--space-8);
-  background: var(--color-blue-50);
-  border: 1px solid var(--color-blue-100);
-  border-radius: var(--radius-lg);
-}
-.carecredit-panel__logo {
-  margin: 0 auto var(--space-4);
-}
-.carecredit-panel__heading {
-  font-size: var(--text-2xl);
-  color: var(--color-blue-800);
-  margin-bottom: var(--space-3);
-}
-.carecredit-panel__lead {
-  color: var(--color-text-muted);
-  line-height: var(--leading-relaxed);
-  margin-bottom: var(--space-4);
-}
-.carecredit-panel__actions {
-  display: flex;
-  gap: var(--space-4);
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.carecredit-panel__secondary-link {
-  font-size: var(--text-sm);
-  color: var(--color-blue-600);
-  font-weight: var(--weight-medium);
-  align-self: center;
-}
-
 /* Mid-page CTA (exploratory, subordinate to bottom CTA) */
 .mid-page-cta {
   margin-top: var(--space-10);

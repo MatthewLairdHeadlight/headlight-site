@@ -96,7 +96,6 @@ export const siteFooter = /* html */`
         <a href="mailto:welcome@headlightmentalhealthcare.com">welcome@headlightmentalhealthcare.com</a>
         <p style="font-size:var(--text-xs);color:rgba(255,255,255,.4);margin-top:var(--space-4)">
           <a href="${baseUrl}contact/">Start Secure Intake</a><br>
-          <a href="https://www.carecredit.com/go/253XCW/?dtc=DS1X&sitecode=h2mdo9bg10" target="_blank" rel="noopener noreferrer">Financing via CareCredit&reg;</a><br>
           Telehealth Available
         </p>
       </div>
