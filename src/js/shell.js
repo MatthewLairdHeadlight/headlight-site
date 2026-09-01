@@ -29,6 +29,7 @@ export const siteHeader = /* html */`
         <a href="${baseUrl}services/">Services</a>
         <a href="${baseUrl}faqs/">FAQs</a>
         <a href="${baseUrl}genesight/">GeneSight</a>
+        <a href="${baseUrl}resources/">Resources</a>
         <button
           type="button"
           class="site-theme-toggle"
@@ -82,6 +83,7 @@ export const siteFooter = /* html */`
         <a href="${baseUrl}services/">Services</a>
         <a href="${baseUrl}faqs/">FAQs</a>
         <a href="${baseUrl}genesight/">GeneSight</a>
+        <a href="${baseUrl}resources/">Resources</a>
         <a href="${baseUrl}contact/">Contact</a>
         <a href="https://headlightmentalhealthcare.com/communication-policy/" target="_blank" rel="noopener noreferrer">Communication Policy</a>
       </div>
