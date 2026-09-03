@@ -2,6 +2,7 @@
  * Shared HTML fragments injected into pages via JS.
  * Keeps header/footer DRY across multi-page Vite builds.
  */
+import { initCharmbot } from './charmbot.js';
 
 const baseUrl = import.meta.env.BASE_URL;
 const THEME_STORAGE_KEY = 'theme';
@@ -140,6 +141,7 @@ export function mountShell() {
   if (footerSlot) footerSlot.outerHTML = siteFooter;
   initThemeToggle();
   initWaterBannerCanvas();
+  initCharmbot();
 }
 
 function getStoredTheme() {
