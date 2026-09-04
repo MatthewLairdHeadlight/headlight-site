@@ -8,10 +8,10 @@ export function initCharmbot() {
   window.charmbot.domain = 'https://ehr.charmtracker.com';
   window.charmbot.theme = 'bluetheme';
   window.charmbot.description = 'Welcome!';
-  window.charmbot.introduction = "I can help current patients book an appointment online. New to Headlight? Please start at our contact page so we can make sure we're the right fit for your needs.";
+  window.charmbot.introduction = "I can help current patients request an appointment online — we'll confirm your time by text or email. New to Headlight? Please reach out through our contact page first.";
   window.charmbot.info = '';
 
-  const BOT_SRC = 'https://ehr.charmtracker.com/charmbot.do?method=startBot&client_id=ad5573370f326a1ad16c71e52458ab4fd74c6653a93eedd3a8262a6e6c2edd6cb838040879455ae0';
+  const BOT_SRC = 'https://ehr.charmtracker.com/charmbot.do?method=startBot&client_id=ad5573370f326a1a87c51aa704b584e4077a162f163cddafa8262a6e6c2edd6cdedd4018a51ab9bf680f7b01dd6d0ca59509d6dbfe907f36a0ae868b6eb0918a';
   if (document.querySelector(`script[src="${BOT_SRC}"]`)) return;
 
   const script = document.createElement('script');
