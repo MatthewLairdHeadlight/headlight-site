@@ -543,6 +543,7 @@ html[data-theme="dark"] .site-theme-toggle__icon--moon { display: block; }
 .js .reveal--d3 { transition-delay: 270ms; }
 .js .reveal--d4 { transition-delay: 360ms; }
 .js .reveal--d5 { transition-delay: 450ms; }
+.js .reveal--d6 { transition-delay: 540ms; }
 
 /* Visible state — added by IntersectionObserver */
 .js .reveal.is-visible {
@@ -560,7 +561,8 @@ html[data-theme="dark"] .site-theme-toggle__icon--moon { display: block; }
   .js .reveal--d2,
   .js .reveal--d3,
   .js .reveal--d4,
-  .js .reveal--d5 { transition-delay: 0ms; }
+  .js .reveal--d5,
+  .js .reveal--d6 { transition-delay: 0ms; }
 }
 
 /* ─── Card icon: accept SVG children ────────────────────────────────────── */
