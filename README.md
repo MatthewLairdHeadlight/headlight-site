@@ -107,6 +107,7 @@ The About page slideshow uses:
 - `assets/images/benefit-corp-badge.png` — Benefit Corporation badge (About page)
 - `assets/images/gpecc-member-listing.jpeg` — Greater Phoenix Equality Chamber of Commerce member listing image (About page)
 - `assets/images/genesight-logo.png` — GeneSight logo (Services, GeneSight pages)
+- `assets/images/psychology-today-badge.png` — Psychology Today badge (Home, About, footer)
 
 ### Stock / curated images
 

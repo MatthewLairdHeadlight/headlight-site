@@ -72,7 +72,7 @@ export const siteFooter = /* html */`
         </p>
         <div class="site-footer__pt-link">
           <a href="https://www.psychologytoday.com/us/psychiatrists/headlight-mental-healthcare-pllc-phoenix-az/1234382" target="_blank" rel="noopener noreferrer" class="site-footer__pt-badge" aria-label="View profile on Psychology Today (opens in new tab)">
-            <img src="${baseUrl}images/psychology-today-badge.svg" alt="" loading="lazy" />
+            <img src="${baseUrl}images/psychology-today-badge.png" alt="Psychology Today" loading="lazy" />
           </a>
         </div>
       </div>
