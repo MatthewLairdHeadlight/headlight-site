@@ -530,6 +530,12 @@ html[data-theme="dark"] .site-theme-toggle__icon--moon { display: block; }
   transform: translateY(-1px);
   border-color: rgba(255,255,255,.7);
 }
+.site-footer__pt-badge:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,.7);
+  outline: 2px solid rgba(255,255,255,.85);
+  outline-offset: 2px;
+}
 
 /* ─── Scroll-reveal motion system ───────────────────────────────────────── */
 /* Gate hidden state on JS availability: if JS is blocked, content stays visible */
@@ -683,6 +689,11 @@ html[data-theme="dark"] .site-theme-toggle__icon--moon { display: block; }
   align-items: center;
   text-decoration: none;
   margin-bottom: var(--space-3);
+}
+.pt-profile-callout__badge-link:focus-visible {
+  outline: 2px solid var(--color-blue-500);
+  outline-offset: 3px;
+  border-radius: var(--radius-full);
 }
 .pt-profile-callout__badge {
   display: block;
@@ -984,6 +995,11 @@ html[data-theme="dark"] .site-theme-toggle__icon--moon { display: block; }
   display: block;
   width: auto;
   height: 34px;
+}
+.trust-bar__pt-link:focus-visible {
+  outline: 2px solid var(--color-blue-500);
+  outline-offset: 4px;
+  border-radius: var(--radius-full);
 }
 
 /* ─── Hero actions row ───────────────────────────────────────────────────── */
