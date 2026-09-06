@@ -71,9 +71,8 @@ export const siteFooter = /* html */`
           Board Certified Psychiatric Nurse Practitioner
         </p>
         <div class="site-footer__pt-link">
-          <a href="https://www.psychologytoday.com/us/psychiatrists/headlight-mental-healthcare-pllc-phoenix-az/1234382" target="_blank" rel="noopener noreferrer" class="site-footer__pt-badge" aria-label="Psychology Today Profile (opens in new tab)">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14" aria-hidden="true"><circle cx="10" cy="10" r="8"/></svg>
-            Psychology Today Profile
+          <a href="https://www.psychologytoday.com/us/psychiatrists/headlight-mental-healthcare-pllc-phoenix-az/1234382" target="_blank" rel="noopener noreferrer" class="site-footer__pt-badge" aria-label="View profile on Psychology Today (opens in new tab)">
+            <img src="${baseUrl}images/psychology-today-badge.svg" alt="" loading="lazy" />
           </a>
         </div>
       </div>
