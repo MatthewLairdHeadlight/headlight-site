@@ -189,9 +189,9 @@ npm run build
 5. Add navigation links in `src/js/shell.js` if the page should appear in the main nav
 6. Build and verify the new route appears in `dist/`
 
-## HIPAA and contact form note
+## HIPAA and contact workflow note
 
-The contact page embeds a live **IntakeQ** iframe (`https://intakeq.com/new/dtglwx`), which is the HIPAA-compliant intake platform used by Headlight Mental Healthcare. A new-tab fallback link (`<a href="...">` pointing at the same URL) is provided below the iframe for users in restrictive browser environments. No PHI is collected or stored in this repository.
+The contact page embeds live **CharmHealth** booking calendars (`https://ehr.charmtracker.com/...`) and the shared site shell loads the Charm chatbot from the same domain. There is no repository-side form processing, storage, or forwarding for patient intake details. PHI collection and handling occur within CharmHealth under its HIPAA BAA boundary. Do not add client-side logging, analytics, or request interception that would route PHI outside CharmHealth.
 
 ## Repository notes
 

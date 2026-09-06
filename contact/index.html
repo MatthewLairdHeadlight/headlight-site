@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Start Secure Intake | Headlight Mental Healthcare</title>
-  <meta name="description" content="Start your secure IntakeQ new patient intake and appointment request with Matthew Laird, PMHNP-BC. Phoenix, Arizona; Portland, Oregon; and telehealth." />
+  <title>Book an Appointment | Headlight Mental Healthcare</title>
+  <meta name="description" content="Schedule online with Matthew Laird, PMHNP-BC for psychiatric care in Phoenix, AZ; Portland, OR; and telehealth." />
   <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
   <script>
     (() => {
@@ -30,15 +30,95 @@
 
   <main id="main-content">
 
-    <section class="page-banner" aria-label="Start secure intake">
+    <section class="page-banner" aria-label="Book an appointment">
       <img class="page-banner__bg" src="%BASE_URL%images/stock/water-reflection.jpg" alt="" role="presentation" fetchpriority="high" />
       <div class="page-banner__scrim" aria-hidden="true"></div>
       <div class="container">
         <div class="page-banner__content reveal">
           <p class="page-banner__eyebrow">Get Started</p>
-          <h1 class="page-banner__title">Start Your Secure Intake</h1>
+          <h1 class="page-banner__title">Book Your Appointment</h1>
           <p class="page-banner__subtitle">
-            New patients welcome. Complete the secure IntakeQ form and we'll get back to you within one business day.
+            New and returning patients welcome — pick a time that works for you. No referral required.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="booking-heading">
+      <div class="container">
+        <div class="contact-booking reveal">
+          <h2 class="section__heading" id="booking-heading">Schedule Online</h2>
+
+          <div class="booking-tabs" role="tablist" aria-label="Choose an office" data-booking-tabs>
+            <button
+              type="button"
+              id="booking-tab-phoenix"
+              role="tab"
+              aria-selected="true"
+              aria-controls="booking-panel-phoenix"
+              tabindex="0"
+              data-booking-tab
+            >
+              Phoenix, AZ
+            </button>
+            <button
+              type="button"
+              id="booking-tab-portland"
+              role="tab"
+              aria-selected="false"
+              aria-controls="booking-panel-portland"
+              tabindex="-1"
+              data-booking-tab
+            >
+              Portland, OR
+            </button>
+          </div>
+
+          <div
+            id="booking-panel-phoenix"
+            class="booking-panel"
+            role="tabpanel"
+            aria-labelledby="booking-tab-phoenix"
+            data-booking-panel
+          >
+            <iframe
+              width="100%"
+              height="1000"
+              src="https://ehr.charmtracker.com/publicCal.sas?method=getCal&amp;digest=7b0884d7bfa4ed5f3e28a350425281fc9a101a56b4f0387aa30cf288d7fbf8be7cdd5a21bebc3f94c73854159f346ff1d95fcbc3b76e32a2"
+              style="overflow:hidden"
+              frameborder="0"
+              title="Online appointment booking — Phoenix, AZ"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </div>
+
+          <div
+            id="booking-panel-portland"
+            class="booking-panel"
+            role="tabpanel"
+            aria-labelledby="booking-tab-portland"
+            data-booking-panel
+            hidden
+          >
+            <iframe
+              width="100%"
+              height="1000"
+              data-src="https://ehr.charmtracker.com/publicCal.sas?method=getCal&amp;digest=7b0884d7bfa4ed5fe7f4562b4b274468944515bf1ed169f5694921ce7bb56cc06ee57013c1a537e6c73854159f346ff1d95fcbc3b76e32a2"
+              style="overflow:hidden"
+              frameborder="0"
+              loading="lazy"
+              title="Online appointment booking — Portland, OR"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </div>
+
+          <p class="contact-booking__support">
+            Existing patients can also manage appointments, messages, and forms through the
+            <a href="https://ehr.charmtracker.com/patientportal" target="_blank" rel="noopener noreferrer">patient portal</a>.
+            If the calendar doesn't load, call the office directly and we'll get you scheduled.
+          </p>
+          <p class="contact-booking__fallback">
+            <a href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&amp;digest=7b0884d7bfa4ed5f3e28a350425281fc9a101a56b4f0387aa30cf288d7fbf8be7cdd5a21bebc3f94c73854159f346ff1d95fcbc3b76e32a2" target="_blank" rel="noopener noreferrer" data-booking-fallback aria-label="Open the booking calendar in a new tab (opens in new tab)">Open the booking calendar in a new tab (opens in new tab)</a>
           </p>
         </div>
       </div>
@@ -47,19 +127,11 @@
     <section class="section" aria-labelledby="contact-heading">
       <div class="container">
         <div class="stack-layout stack-layout--start">
-
-          <div class="contact-book-cta reveal">
-            <h2>Ready to Book Online?</h2>
-            <p>View available times and schedule your appointment instantly with our online booking calendar.</p>
-            <a href="%BASE_URL%book/" class="btn btn--primary">Book an Appointment</a>
-          </div>
-
           <div class="contact-info reveal">
             <p class="section__eyebrow">Reach Out</p>
             <h2 class="section__heading" id="contact-heading">How to Connect</h2>
             <p class="contact-info__lead">
-              The intake process is simple and straightforward. Complete the secure IntakeQ
-              form to request an appointment, or call directly — Matthew answers his own messages.
+              Booking is simple — choose a time above, or call directly. Matthew answers his own messages.
             </p>
 
             <div class="contact-info-list">
@@ -126,28 +198,6 @@
 
             </div>
           </div>
-
-          <div class="reveal reveal--d1">
-            <div class="contact-intake" aria-labelledby="form-heading">
-              <h3 id="form-heading" class="contact-form__heading">Request an Appointment</h3>
-              <p class="contact-intake__intro">
-                Share a few details and we'll reach out to schedule. This form is secure and handled by IntakeQ, our HIPAA-compliant intake platform.
-              </p>
-              <div class="contact-intake__frame">
-                <iframe
-                  class="contact-intake__iframe"
-                  src="https://intakeq.com/new/dtglwx"
-                  title="Secure IntakeQ appointment request form"
-                  loading="lazy"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                ></iframe>
-              </div>
-              <p class="contact-intake__fallback">
-                If the secure form does not load for you, <a href="https://intakeq.com/new/dtglwx" target="_blank" rel="noopener noreferrer">open the IntakeQ intake in a new tab</a>.
-              </p>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
