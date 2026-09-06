@@ -105,6 +105,7 @@ The About page slideshow uses:
 
 - `assets/images/logo.svg` — site logo (header and footer, all pages)
 - `assets/images/benefit-corp-badge.png` — Benefit Corporation badge (About page)
+- `assets/images/gpecc-member-listing.jpeg` — Greater Phoenix Equality Chamber of Commerce member listing image (About page)
 - `assets/images/genesight-logo.png` — GeneSight logo (Services, GeneSight pages)
 
 ### Stock / curated images
