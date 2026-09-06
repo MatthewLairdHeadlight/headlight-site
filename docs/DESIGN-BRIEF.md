@@ -16,7 +16,7 @@ Every design decision gets tested against this sentence. If an element doesn't s
 - **Provider:** Matthew Laird, PMHNP-BC — Board Certified Psychiatric Nurse Practitioner, Certified Autism Specialist (CAS), 20+ years experience
 - **Locations:** Phoenix, AZ · Portland, OR · Telehealth in both states
 - **Differentiators:** LGBTQ+ affirming care, autism/neurodivergent specialization, NGLCC-certified LGBT Business Enterprise, Benefit Corporation for Good, evidence-based practice
-- **Primary conversion goal:** Start Secure Intake (IntakeQ form)
+- **Primary conversion goal:** Book an appointment (embedded Charm calendar)
 - **Secondary goals:** Phone calls, Psychology Today profile views
 
 ## 3. Audience
@@ -84,11 +84,11 @@ My three: [ ] · [ ] · [ ]
 
 The site is a 5-page static Vite build with an established token system (`src/css/tokens.css`):
 
-- **Pages:** Home, About, Services, GeneSight, Contact
+- **Pages:** Home, About, Services, GeneSight, FAQs, Resources, and Get Started (Contact + Booking)
 - **Color:** blue-family palette (blue-50 → blue-800) with semantic aliases
 - **Type:** UI font + scale tokens; spacing scale; radius/shadow/transition tokens
 - **Components:** page banners with scrim + water-fx canvas, cards, trust bar, affiliation cards, Ken Burns slideshow, CTA strips
-- **Constraints:** HIPAA-conscious — intake goes through embedded IntakeQ iframe; no PHI touches this site
+- **Constraints:** HIPAA-conscious — booking/intake interactions occur in embedded CharmHealth experiences; no PHI touches this site
 
 **Question for the designer:** evolve this system, or propose a new direction? (Evolving is cheaper and the bones are solid.)
 

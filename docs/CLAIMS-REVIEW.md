@@ -29,7 +29,7 @@ a link fix that only the owner can verify.
 
 | # | Claim | File / approx. line | Resolution needed |
 |---|---|---|---|
-| 9 | CTA microcopy: "No payment required to begin." | `services/index.html` bottom CTA | Confirm that IntakeQ form at `https://intakeq.com/new/dtglwx` collects no payment information at the start of intake; replace with more specific wording (e.g. "Takes about X minutes. No payment required to start.") once verified |
+| 9 | CTA microcopy: "No payment required to begin." | `services/index.html` bottom CTA | Confirm that Charm online booking/intake flow does not collect payment information at initial scheduling; replace with more specific wording (e.g. "Takes about X minutes. No payment required to start.") once verified |
 | 10 | Insurance & Payment carrier list | `services/index.html` Insurance & Payment section | Verify the carrier list against signed payer contracts and credentialing records for each entity separately (Headlight Mental Healthcare, PLLC in Arizona; Headlight Mental Healthcare, LLC in Oregon), not against the Psychology Today profile, which is self-entered and unverified. Payer networks change without notice; re-check this section periodically. |
 | 11 | Insurance & Payment self-pay discount wording | `services/index.html` Insurance & Payment section | The practice is Medicare-enrolled in Oregon. A published reduced self-pay rate is common and generally permissible, but confirm with the biller or a healthcare attorney that the discount structure and its public wording are appropriate given Medicare enrollment. Pending professional review. |
 

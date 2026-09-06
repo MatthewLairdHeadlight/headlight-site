@@ -31,7 +31,6 @@ export const siteHeader = /* html */`
         <a href="${baseUrl}faqs/">FAQs</a>
         <a href="${baseUrl}genesight/">GeneSight</a>
         <a href="${baseUrl}resources/">Resources</a>
-        <a href="${baseUrl}book/" class="site-nav__cta">Book Now</a>
         <button
           type="button"
           class="site-theme-toggle"
@@ -42,7 +41,7 @@ export const siteHeader = /* html */`
           <svg class="site-theme-toggle__icon site-theme-toggle__icon--sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"/></svg>
           <svg class="site-theme-toggle__icon site-theme-toggle__icon--moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3c-.03.2-.04.4-.04.61A7.5 7.5 0 0 0 18.67 11.1c.78 0 1.53-.12 2.23-.31.07.64.1 1.3.1 2Z"/></svg>
         </button>
-        <a href="${baseUrl}contact/" class="site-nav__cta">Start Intake</a>
+        <a href="${baseUrl}contact/" class="site-nav__cta">Book / Contact</a>
       </nav>
     </div>
   </div>
@@ -86,8 +85,7 @@ export const siteFooter = /* html */`
         <a href="${baseUrl}faqs/">FAQs</a>
         <a href="${baseUrl}genesight/">GeneSight</a>
         <a href="${baseUrl}resources/">Resources</a>
-        <a href="${baseUrl}book/">Book an Appointment</a>
-        <a href="${baseUrl}contact/">Contact</a>
+        <a href="${baseUrl}contact/">Book / Contact</a>
         <a href="https://headlightmentalhealthcare.com/communication-policy/" target="_blank" rel="noopener noreferrer">Communication Policy</a>
       </div>
       <div>
@@ -112,7 +110,7 @@ export const siteFooter = /* html */`
         <span style="display:block;font-size:var(--text-xs);color:rgba(255,255,255,.4)">Fax: 541-588-6525</span>
         <a href="mailto:welcome@headlightmentalhealthcare.com">welcome@headlightmentalhealthcare.com</a>
         <p style="font-size:var(--text-xs);color:rgba(255,255,255,.4);margin-top:var(--space-4)">
-          <a href="${baseUrl}contact/">Start Secure Intake</a><br>
+          <a href="${baseUrl}contact/">Book an Appointment</a><br>
           Telehealth Available
         </p>
       </div>

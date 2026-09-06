@@ -20,7 +20,6 @@ export default defineConfig(() => ({
         faqs: resolve(__dirname, 'faqs/index.html'),
         genesight: resolve(__dirname, 'genesight/index.html'),
         privacyPolicy: resolve(__dirname, 'privacy-policy/index.html'),
-        book: resolve(__dirname, 'book/index.html'),
         resources: resolve(__dirname, 'resources/index.html'),
         resourcesParentingAutism: resolve(__dirname, 'resources/parenting-a-child-with-autism/index.html'),
         resourcesDeportation: resolve(__dirname, 'resources/psychological-impact-of-deportation/index.html'),

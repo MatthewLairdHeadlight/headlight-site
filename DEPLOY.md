@@ -39,11 +39,12 @@ produces subpath URLs (`/headlight-site/images/…`) required for project-site h
 
 ---
 
-## Contact form — HIPAA boundary note
+## Contact and booking embeds — HIPAA boundary note
 
-The contact page embeds a live IntakeQ intake form via an `<iframe>` pointing at
-`https://intakeq.com/new/dtglwx`. **There is no repo-side form handler, no email
-forwarding, and no server-side code in this repository.** All form data is collected
-and stored exclusively by IntakeQ under their HIPAA Business Associate Agreement.
-Do not add any client-side logging, analytics, or request interception that would
-cause PHI to transit infrastructure outside that BAA boundary.
+The contact page embeds live CharmHealth booking calendars via `<iframe>` elements
+pointing at `https://ehr.charmtracker.com/...`, and the shared shell loads the Charm
+chatbot from the same domain. **There is no repo-side form handler, no email
+forwarding, and no server-side code in this repository.** PHI is collected and stored
+inside CharmHealth under its HIPAA Business Associate Agreement. Do not add
+client-side logging, analytics, or request interception that would cause PHI to transit
+infrastructure outside that BAA boundary.
