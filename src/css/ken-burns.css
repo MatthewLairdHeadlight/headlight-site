@@ -91,43 +91,45 @@
 .kb-anim-6 .kb-slide__img { animation: kb-drift-r    var(--kb-duration, 8s) ease-in-out forwards; }
 .kb-anim-7 .kb-slide__img { animation: kb-drift-up   var(--kb-duration, 8s) ease-in-out forwards; }
 
-/* Per-slide object-position overrides (indices match data-slide after p03 removal) */
+/* Per-slide object-position overrides (indices match data-slide sequence with p03 included) */
 /* slide 0: p02.jpg — zoom in more so faces are visible */
 .kb-slide[data-slide="0"] .kb-slide__img { object-position: 50% 40%; inset: -8%; width: 116%; height: 116%; }
-/* slide 1: p04.jpg */
+/* slide 1: p03.jpg */
 .kb-slide[data-slide="1"] .kb-slide__img { object-position: 50% 50%; }
-/* slide 2: p05.jpg — zoom out to fit tall face without awkward crop */
-.kb-slide[data-slide="2"] .kb-slide__img { object-position: 50% 30%; inset: 0; width: 100%; height: 100%; }
-/* slide 3: p07.jpg — shift UP so both faces show */
-.kb-slide[data-slide="3"] .kb-slide__img { object-position: 50% 20%; }
-/* slide 4: p08.jpg */
-.kb-slide[data-slide="4"] .kb-slide__img { object-position: 50% 42%; }
-/* slide 5: p09.jpg */
+/* slide 2: p04.jpg */
+.kb-slide[data-slide="2"] .kb-slide__img { object-position: 50% 50%; }
+/* slide 3: p05.jpg — zoom out to fit tall face without awkward crop */
+.kb-slide[data-slide="3"] .kb-slide__img { object-position: 50% 30%; inset: 0; width: 100%; height: 100%; }
+/* slide 4: p07.jpg — shift UP so both faces show */
+.kb-slide[data-slide="4"] .kb-slide__img { object-position: 50% 20%; }
+/* slide 5: p08.jpg */
 .kb-slide[data-slide="5"] .kb-slide__img { object-position: 50% 42%; }
-/* slide 6: p10.jpg */
-.kb-slide[data-slide="6"] .kb-slide__img { object-position: 50% 50%; }
-/* slide 7: p11.jpg */
-.kb-slide[data-slide="7"] .kb-slide__img { object-position: 42% 21%; }
-/* slide 8: p12.jpg — shift DOWN to catch friend's face */
-.kb-slide[data-slide="8"] .kb-slide__img { object-position: 50% 62%; }
-/* slide 9: p13.jpg — shift DOWN substantially to catch friend's face below */
-.kb-slide[data-slide="9"] .kb-slide__img { object-position: 50% 80%; }
-/* slide 10: p15.jpg */
-.kb-slide[data-slide="10"] .kb-slide__img { object-position: 50% 42%; }
-/* slide 11: p16.jpg */
-.kb-slide[data-slide="11"] .kb-slide__img { object-position: 50% 50%; }
-/* slide 12: p17.jpg */
-.kb-slide[data-slide="12"] .kb-slide__img { object-position: 52% 78%; }
-/* slide 13: p19.jpg */
-.kb-slide[data-slide="13"] .kb-slide__img { object-position: 50% 50%; }
-/* slide 14: p20.jpg */
-.kb-slide[data-slide="14"] .kb-slide__img { object-position: 67% 74%; }
-/* slide 15: p21.jpg */
-.kb-slide[data-slide="15"] .kb-slide__img { object-position: 50% 42%; }
-/* slide 16: p22.jpg — shift UP so faces are visible instead of mouths */
-.kb-slide[data-slide="16"] .kb-slide__img { object-position: 50% 20%; }
-/* slide 17: p23.jpg — shift UP so faces are visible instead of mouths */
+/* slide 6: p09.jpg */
+.kb-slide[data-slide="6"] .kb-slide__img { object-position: 50% 42%; }
+/* slide 7: p10.jpg */
+.kb-slide[data-slide="7"] .kb-slide__img { object-position: 50% 50%; }
+/* slide 8: p11.jpg */
+.kb-slide[data-slide="8"] .kb-slide__img { object-position: 42% 21%; }
+/* slide 9: p12.jpg — shift DOWN to catch friend's face */
+.kb-slide[data-slide="9"] .kb-slide__img { object-position: 50% 62%; }
+/* slide 10: p13.jpg — shift DOWN substantially to catch friend's face below */
+.kb-slide[data-slide="10"] .kb-slide__img { object-position: 50% 80%; }
+/* slide 11: p15.jpg */
+.kb-slide[data-slide="11"] .kb-slide__img { object-position: 50% 42%; }
+/* slide 12: p16.jpg */
+.kb-slide[data-slide="12"] .kb-slide__img { object-position: 50% 50%; }
+/* slide 13: p17.jpg */
+.kb-slide[data-slide="13"] .kb-slide__img { object-position: 52% 78%; }
+/* slide 14: p19.jpg */
+.kb-slide[data-slide="14"] .kb-slide__img { object-position: 50% 50%; }
+/* slide 15: p20.jpg */
+.kb-slide[data-slide="15"] .kb-slide__img { object-position: 67% 74%; }
+/* slide 16: p21.jpg */
+.kb-slide[data-slide="16"] .kb-slide__img { object-position: 50% 42%; }
+/* slide 17: p22.jpg — shift UP so faces are visible instead of mouths */
 .kb-slide[data-slide="17"] .kb-slide__img { object-position: 50% 20%; }
+/* slide 18: p23.jpg — shift UP so faces are visible instead of mouths */
+.kb-slide[data-slide="18"] .kb-slide__img { object-position: 50% 20%; }
 
 /* Vignette layer (always on top of photos, below quote) */
 .ken-burns::before {

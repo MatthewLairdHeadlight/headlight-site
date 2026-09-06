@@ -85,7 +85,6 @@ export const siteFooter = /* html */`
         <a href="${baseUrl}genesight/">GeneSight</a>
         <a href="${baseUrl}resources/">Resources</a>
         <a href="${baseUrl}contact/">Book / Contact</a>
-        <a href="https://headlightmentalhealthcare.com/communication-policy/" target="_blank" rel="noopener noreferrer">Communication Policy</a>
       </div>
       <div>
         <p class="site-footer__heading">Phoenix, AZ Office</p>
