@@ -68,11 +68,10 @@ export function initKenBurns(container, opts = {}) {
 
   // Pause when tab is hidden to save CPU
   document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-      clearInterval(timer);
-    } else {
-      timer = setInterval(advance, duration);
-    }
+    // Always clear first so intervals can't stack across hide/show cycles
+    clearInterval(timer);
+    if (document.hidden) return;
+    timer = setInterval(advance, duration);
   });
 }
 
