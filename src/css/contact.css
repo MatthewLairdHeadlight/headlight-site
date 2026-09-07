@@ -26,8 +26,8 @@
 }
 
 .booking-tabs [role='tab'][aria-selected='true'] {
-  background: var(--color-brand);
-  border-color: var(--color-brand);
+  background: var(--color-cta);
+  border-color: var(--color-cta);
   color: var(--color-white);
 }
 
