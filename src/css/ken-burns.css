@@ -155,60 +155,6 @@
   pointer-events: none;
 }
 
-/* ─── Quote overlay ─────────────────────────────────────────────────────── */
-.kb-quote {
-  position: absolute;
-  inset: 0;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-12) var(--space-6);
-  text-align: center;
-  pointer-events: none;
-}
-
-.kb-quote__body {
-  font-family: var(--font-serif);
-  font-size: clamp(1.25rem, 3.5vw, 2rem);
-  font-weight: var(--weight-normal);
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.95);
-  line-height: 1.55;
-  max-width: 760px;
-  text-shadow:
-    0 1px 8px rgba(0,0,0,.6),
-    0 2px 24px rgba(0,0,0,.4);
-  letter-spacing: .01em;
-}
-
-.kb-quote__em {
-  /* "Press on." fragment styled a touch bolder */
-  font-weight: var(--weight-bold);
-  font-style: normal;
-}
-
-.kb-quote__attribution {
-  margin-top: var(--space-5);
-  font-family: var(--font-ui);
-  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
-  font-weight: var(--weight-medium);
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.7);
-  text-shadow: 0 1px 6px rgba(0,0,0,.5);
-}
-
-.kb-quote__dash {
-  display: inline-block;
-  width: 2em;
-  height: 1px;
-  background: rgba(255,255,255,.4);
-  vertical-align: middle;
-  margin-inline: var(--space-3);
-}
-
 /* ─── Reduced motion: show still image, gentle fade ────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .kb-slide { transition: opacity 600ms ease; }
