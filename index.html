@@ -18,8 +18,7 @@
       } catch {
         storedTheme = null;
       }
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const theme = storedTheme || (prefersDark ? 'dark' : 'light');
+      const theme = storedTheme || 'dark';
       root.setAttribute('data-theme', theme);
     })();
   </script>
