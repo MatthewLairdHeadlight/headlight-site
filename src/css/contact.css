@@ -51,15 +51,6 @@
   line-height: var(--leading-relaxed);
 }
 
-.contact-booking__fallback {
-  margin-top: var(--space-3);
-  font-size: var(--text-sm);
-}
-
-.contact-booking__fallback a {
-  color: var(--color-text-accent);
-}
-
 @media (max-width: 640px) {
   .booking-panel iframe {
     min-height: 700px;

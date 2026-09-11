@@ -19,7 +19,6 @@ function initBookingTabs() {
     const panelId = tab.getAttribute('aria-controls');
     return panelId ? document.getElementById(panelId) : null;
   });
-  const fallbackLink = document.querySelector('[data-booking-fallback]');
 
   const normalizeCalendarUrl = (url) => (url ? url.replace(/&amp;/gi, '&') : '');
 
@@ -38,11 +37,6 @@ function initBookingTabs() {
         if (iframe && !iframe.getAttribute('src')) {
           const pendingSrc = iframe.getAttribute('data-src');
           if (pendingSrc) iframe.setAttribute('src', normalizeCalendarUrl(pendingSrc));
-        }
-
-        if (fallbackLink && iframe) {
-          const activeHref = normalizeCalendarUrl(iframe.getAttribute('src') || iframe.getAttribute('data-src'));
-          if (activeHref) fallbackLink.setAttribute('href', activeHref);
         }
       }
     });
