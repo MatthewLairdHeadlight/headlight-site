@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Communication Policy | Headlight Mental Healthcare</title>
+  <meta name="description" content="Review Headlight Mental Healthcare's communication policy for email, social media, appointments, and SMS communication consent." />
+  <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+  <script>
+    (() => {
+      const root = document.documentElement;
+      root.classList.add('js');
+      let storedTheme = null;
+      try {
+        const value = window.localStorage.getItem('theme');
+        storedTheme = value === 'light' || value === 'dark' ? value : null;
+      } catch {
+        storedTheme = null;
+      }
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = storedTheme || (prefersDark ? 'dark' : 'light');
+      root.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <script type="module" src="../src/pages/communication-policy.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main id="main-content">
+    <section class="page-banner" aria-label="Communication Policy">
+      <img class="page-banner__bg" src="%BASE_URL%images/stock/clinic-bg.jpg" alt="" role="presentation" fetchpriority="high" />
+      <div class="page-banner__scrim" aria-hidden="true"></div>
+      <div class="container">
+        <div class="page-banner__content reveal">
+          <p class="page-banner__eyebrow">Practice Policies</p>
+          <h1 class="page-banner__title">Communication Policy</h1>
+          <p class="page-banner__subtitle">
+            Important details about how Headlight Mental Healthcare handles practice communication and appointment-related messaging.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="communication-policy-heading">
+      <div class="container">
+        <p class="section__eyebrow reveal">Practice Policies</p>
+        <h2 class="section__heading reveal" id="communication-policy-heading">Please review these communication expectations.</h2>
+        <p class="section__lead reveal reveal--d1">
+          These policies explain how to contact the practice, how appointment communication is handled, and what to expect from SMS messages.
+        </p>
+
+        <article class="article-prose reveal reveal--d2">
+          <h2>Email</h2>
+          <p>Our email is encrypted and HIPAA-compliant per Google Workspace's standards for healthcare providers, with a Business Associate Agreement on file.</p>
+
+          <h2>Social Media</h2>
+          <p>Please do not connect with, follow, or message any of our staff via personal or public social media accounts. We do not respond to communications from established patients through social media.</p>
+
+          <h2>Appointments: No-Shows, Late Arrivals, and Cancellations</h2>
+          <p>We work hard to respect your time and keep appointments running smoothly, and we ask patients to do the same. If you no-show, arrive significantly late, or cancel with less than 24 hours' notice, you'll receive a reminder of this policy through the patient portal. A repeat occurrence puts this policy into effect, which may result in termination from the practice. If terminated, you'll receive a certified letter and a final 30-day medication supply/refill to allow time to establish care elsewhere.</p>
+
+          <h2>SMS Communication Consent</h2>
+          <p>By scheduling an appointment, you agree to receive SMS messages related to booking and appointment follow-up from Headlight Mental Healthcare. Message frequency may vary; message/data rates may apply. Text HELP to <a href="tel:+14806187023">(480) 618-7023</a> or <a href="tel:+15415811080">(541) 581-1080</a> for assistance. Text STOP to opt out at any time.</p>
+
+          <h2>Questions About This Policy</h2>
+          <p>Contact us at <a href="mailto:welcome@headlightmentalhealthcare.com">welcome@headlightmentalhealthcare.com</a> or call your local office.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>
