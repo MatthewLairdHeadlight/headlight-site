@@ -1,5 +1,6 @@
 // Privacy Policy page entry point
 import '../css/base.css';
+import '../css/resources.css';
 import { mountShell } from '../js/shell.js';
 import { markActiveNav, initStickyHeader, initScrollReveal } from '../js/site.js';
 
